@@ -6,7 +6,7 @@ A working local agent controller: HTTP 402 → official x402 client authorizatio
 
 ## Evidence versioning (release v4)
 
-This release corrects metadata and formats TypeScript without changing behavior; the v3 browser-workflow video and deployed contract are unchanged. Browser QA screenshots were refreshed. Current video: **40 seconds, 1280×1000, actual browser captures**. All three current video reports bind to the same SHA-256. See [evidence/README.md](evidence/README.md) and [EVIDENCE_INDEX.json](evidence/EVIDENCE_INDEX.json) before interpreting older receipts/logs; historical reports are explicitly superseded.
+This release corrects metadata and formats TypeScript without changing behavior; the v3 browser-workflow video and deployed contract are unchanged. Browser QA screenshots were refreshed. Current video: **40 seconds, 1280×1000, actual browser captures**. All three current video reports bind to the same SHA-256. See `evidence/README.md` and `evidence/EVIDENCE_INDEX.json` inside the source archive before interpreting older receipts/logs; historical reports are explicitly superseded.
 
 ## Verified results
 
@@ -21,6 +21,8 @@ Contract `0x7e4b6EdbEC697a28Fce4F1D6a7e30Ed47B8164E6`, chain 61999. Source SHA-2
 Public receipts, signed evidence and local effect logs are in `evidence/signed-*-*.json`. Initial unsigned synthetic review is retained as historical evidence, not substituted for signed cases. No user wallet or real funds used; observed gas price and value zero.
 
 ## Run
+
+Download and extract [delivery-review-source.zip](delivery-review-source.zip), then run these commands in the extracted directory.
 
 ```sh
 npm ci
@@ -69,4 +71,4 @@ Mission submission is pending Discord linkage and the required builder-wg role. 
 
 ## Download
 
-The complete source, tests, public evidence and 40-second demo are in `delivery-review-source.zip`. Extract it, then follow the Run instructions above. Private signing material, account handoff notes, dependencies and build caches are excluded.
+The complete source, tests, public evidence and 40-second demo are in [delivery-review-source.zip](delivery-review-source.zip). Watch the [40-second demo](delivery-review-demo.mp4). Extract it, then follow the Run instructions above. Private signing material, account handoff notes, dependencies and build caches are excluded.
