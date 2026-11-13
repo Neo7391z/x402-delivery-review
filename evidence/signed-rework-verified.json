@@ -1,0 +1,32 @@
+{
+  "verified": true,
+  "effect": "PAUSE",
+  "decision": "REWORK",
+  "reason": "The delivered API answer directly contradicts the agreed terms by claiming that 'optimistic consensus is always correct' and that 'challenges are unnecessary'. The terms explicitly require explaining challenge escalation and uncertainty, and state: 'do not promise guaranteed correctness.' Furthermore, it fails to cover validator independence and challenge escalation.",
+  "evidenceId": "08b281e31c0ad9dab82c7c859acf688d107eecc87217ec23f225cb361595a57a",
+  "transactionHash": "0xde31d898fe9d24374073b69ad3f8a70287d4428d6a0aa2a8ad700c81c75ca5e5",
+  "contractAddress": "0x7e4b6EdbEC697a28Fce4F1D6a7e30Ed47B8164E6",
+  "sourceSha256": "c7acf29cd223bf3235bebf8e5434b87e6e44940d8d4a3c3c20f073a8970f747d",
+  "chainId": 61999,
+  "rpc": "https://studio.genlayer.com/api",
+  "trust": "trusted-studionet-rpc",
+  "consensus": {
+    "agree": 3,
+    "idle": 2,
+    "total": 5,
+    "independentAgree": 2,
+    "leaderAddress": "0xee496cab6d4428e20daa0f3c4011c0772503ce95"
+  },
+  "checkedAt": "2026-11-13T00:58:07.079Z",
+  "controllerState": "PAUSE",
+  "nextRequestBlockedBeforeFetch": true,
+  "nextAuthorizedDelivery": false,
+  "events": [
+    "GET → 402",
+    "Official x402 SDK → signed sandbox authorization",
+    "200 → provider signature verified → HOLD for Court",
+    "Court REWORK → PAUSE",
+    "BLOCKED before fetch: PAUSE"
+  ],
+  "scope": "Actual signed localhost delivery; public hosted Studionet decision; local controller only"
+}

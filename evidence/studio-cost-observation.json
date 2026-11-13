@@ -1,0 +1,45 @@
+{
+  "balanceAfter": "0x0",
+  "submittedValue": "0",
+  "submittedGasPrice": "0",
+  "receipt": {
+    "transactionHash": "0xaffb7f89dd3bb2137377aa15e1217e8f1005efca353573972c1ea36fb265c10f",
+    "transactionIndex": "0x0",
+    "blockHash": "0xaffb7f89dd3bb2137377aa15e1217e8f1005efca353573972c1ea36fb265c10f",
+    "blockNumber": "0x0",
+    "from": "0x0898cA82CDA5C0008383706230A7b6fF0b0c2618",
+    "to": "0x7e4b6EdbEC697a28Fce4F1D6a7e30Ed47B8164E6",
+    "cumulativeGasUsed": "0x7a1200",
+    "gasUsed": "0x7a1200",
+    "effectiveGasPrice": "0x0",
+    "type": "0x0",
+    "contractAddress": null,
+    "logs": [
+      {
+        "address": "0x7e4b6EdbEC697a28Fce4F1D6a7e30Ed47B8164E6",
+        "topics": [
+          "0xdab9102861c7483a187584d6371d88316f005af507982ccf95c110879f3ed5a5",
+          "0xaffb7f89dd3bb2137377aa15e1217e8f1005efca353573972c1ea36fb265c10f",
+          "0x0000000000000000000000007e4b6EdbEC697a28Fce4F1D6a7e30Ed47B8164E6",
+          "0x0000000000000000000000000898cA82CDA5C0008383706230A7b6fF0b0c2618"
+        ],
+        "data": "0x",
+        "blockNumber": 0,
+        "transactionHash": "0xaffb7f89dd3bb2137377aa15e1217e8f1005efca353573972c1ea36fb265c10f",
+        "transactionIndex": 0,
+        "blockHash": "0xaffb7f89dd3bb2137377aa15e1217e8f1005efca353573972c1ea36fb265c10f",
+        "logIndex": 0,
+        "removed": false
+      }
+    ],
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "status": "0x1"
+  },
+  "scope": "Hosted Studionet simulator only; no user wallet or real funds used",
+  "_evidenceMetadata": {
+    "status": "superseded-historical",
+    "artifactRevision": "pre-signed-sandbox",
+    "currentIndex": "evidence/EVIDENCE_INDEX.json",
+    "note": "Pre-signed-sandbox evidence. Retained for provenance; not current UI/video/test status."
+  }
+}

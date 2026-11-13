@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "browser": "Official Chrome headless shell 157",
+  "mode": "sandbox",
+  "errors": [],
+  "imagesLoaded": true,
+  "mobileOverflow": false,
+  "before": "GET → 402\nOfficial x402 SDK → signed sandbox authorization\n200 → provider signature verified → HOLD for Court\nProvider requests this session: 2 / deliveries: 1",
+  "after": "GET → 402\nOfficial x402 SDK → signed sandbox authorization\n200 → provider signature verified → HOLD for Court\nBLOCKED before fetch: HOLD\nProvider requests this session: 2 / deliveries: 1"
+}

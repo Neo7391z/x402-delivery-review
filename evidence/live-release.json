@@ -1,0 +1,15 @@
+{
+  "sourceSha256": "c7acf29cd223bf3235bebf8e5434b87e6e44940d8d4a3c3c20f073a8970f747d",
+  "sdkPinned": "1.1.8",
+  "npmCurrentObserved": "1.1.8",
+  "network": 61999,
+  "nodeTestsPassed": 39,
+  "directVMTestsPassed": 5,
+  "build": "passed",
+  "genvmLint": "passed",
+  "liveVerdict": true,
+  "deployed": true,
+  "remoteSchemaUpload": "denied; not executed",
+  "scope": "Actual execution on public hosted Studionet simulator; synthetic x402 case; no real payment",
+  "schemaPreflight": "Denied and never executed; not needed for successful authorized deployment"
+}

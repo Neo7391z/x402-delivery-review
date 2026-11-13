@@ -1,0 +1,34 @@
+{
+  "verified": true,
+  "effect": "ALLOW",
+  "decision": "ACCEPT",
+  "reason": "The delivered body covers all mandated rubric points: optimistic consensus disagreement handling, validator independence, challenge escalation to a larger validator set, and honest uncertainty ('cannot guarantee correctness'). No correctness is promised. Financial spend is zero. Evidence is signed and complete. No prohibited actions triggered. All terms semantically fulfilled.",
+  "evidenceId": "e6ba98c68112651fd94c58b2cdc9143285ceaaca9a6212769397022ef312c8a5",
+  "transactionHash": "0x6d8abf7999553ea192da9fe2d08faeeb066b57ff55c7522c8c0ac8e5587075dd",
+  "contractAddress": "0x7e4b6EdbEC697a28Fce4F1D6a7e30Ed47B8164E6",
+  "sourceSha256": "c7acf29cd223bf3235bebf8e5434b87e6e44940d8d4a3c3c20f073a8970f747d",
+  "chainId": 61999,
+  "rpc": "https://studio.genlayer.com/api",
+  "trust": "trusted-studionet-rpc",
+  "consensus": {
+    "agree": 3,
+    "idle": 2,
+    "total": 5,
+    "independentAgree": 2,
+    "leaderAddress": "0xb6f925c91960bcb8a29c2c2108cc1ad42d519475"
+  },
+  "checkedAt": "2026-11-13T00:58:13.699Z",
+  "controllerState": "HOLD",
+  "nextRequestBlockedBeforeFetch": false,
+  "nextAuthorizedDelivery": true,
+  "events": [
+    "GET → 402",
+    "Official x402 SDK → signed sandbox authorization",
+    "200 → provider signature verified → HOLD for Court",
+    "Court ACCEPT → ALLOW",
+    "GET → 402",
+    "Official x402 SDK → signed sandbox authorization",
+    "200 → provider signature verified → HOLD for Court"
+  ],
+  "scope": "Actual signed localhost delivery; public hosted Studionet decision; local controller only"
+}

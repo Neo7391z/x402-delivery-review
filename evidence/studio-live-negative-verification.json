@@ -1,0 +1,13 @@
+{
+  "scenario": "Actual finalized review tx paired with altered delivered answer",
+  "verified": false,
+  "effect": "HOLD",
+  "error": "Evidence calldata mismatch",
+  "checkedAt": "2026-11-13T00:10:49.826Z",
+  "_evidenceMetadata": {
+    "status": "superseded-historical",
+    "artifactRevision": "pre-signed-sandbox",
+    "currentIndex": "evidence/EVIDENCE_INDEX.json",
+    "note": "Pre-signed-sandbox evidence. Retained for provenance; not current UI/video/test status."
+  }
+}

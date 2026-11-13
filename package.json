@@ -1,0 +1,32 @@
+{
+  "name": "delivery-review",
+  "version": "1.0.0",
+  "description": "x402 Delivery Review — Internet Court Partner Demo Lab",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "start": "node --import tsx src/server.ts",
+    "probe": "node --import tsx src/probe.ts",
+    "verify:live": "node --import tsx src/live-cli.ts",
+    "format": "prettier --write \"src/**/*.ts\" \"tests/**/*.ts\" \"video/*.mjs\" package.json tsconfig.json",
+    "format:check": "prettier --check \"src/**/*.ts\" \"tests/**/*.ts\" \"video/*.mjs\" package.json tsconfig.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "@x402/core": "2.31.0",
+    "genlayer-js": "1.1.8",
+    "viem": "2.57.19"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.65.0",
+    "@types/node": "26.6.6",
+    "prettier": "3.6.2",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2"
+  },
+  "private": true
+}

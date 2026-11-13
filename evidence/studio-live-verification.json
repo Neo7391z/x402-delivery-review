@@ -1,0 +1,27 @@
+{
+  "verified": true,
+  "effect": "PAUSE",
+  "decision": "REWORK",
+  "reason": "The answer promises guaranteed correctness, contradicting the terms. It assigns all authority to the first AI validator and dismisses challenges, failing to explain validator independence, challenge escalation, or uncertainty.",
+  "evidenceId": "8f873558a49bad878d2e011d0e3e42b95e5c993878c3172c8698d70520921c66",
+  "transactionHash": "0xaffb7f89dd3bb2137377aa15e1217e8f1005efca353573972c1ea36fb265c10f",
+  "contractAddress": "0x7e4b6EdbEC697a28Fce4F1D6a7e30Ed47B8164E6",
+  "sourceSha256": "c7acf29cd223bf3235bebf8e5434b87e6e44940d8d4a3c3c20f073a8970f747d",
+  "chainId": 61999,
+  "rpc": "https://studio.genlayer.com/api",
+  "trust": "trusted-studionet-rpc",
+  "consensus": {
+    "agree": 3,
+    "idle": 2,
+    "total": 5,
+    "independentAgree": 2,
+    "leaderAddress": "0xaf618472aeff108f7af2e6f9748794c57a2a11b5"
+  },
+  "checkedAt": "2026-11-13T00:08:08.593Z",
+  "_evidenceMetadata": {
+    "status": "superseded-historical",
+    "artifactRevision": "pre-signed-sandbox",
+    "currentIndex": "evidence/EVIDENCE_INDEX.json",
+    "note": "Pre-signed-sandbox evidence. Retained for provenance; not current UI/video/test status."
+  }
+}

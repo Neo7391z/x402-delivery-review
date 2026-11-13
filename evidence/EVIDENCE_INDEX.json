@@ -1,0 +1,355 @@
+{
+  "release": "v4-publication",
+  "currentVideo": {
+    "release": "v4-metadata-correction",
+    "artifactRevision": "v3-browser-workflow",
+    "artifact": "video/delivery-review-demo.mp4",
+    "artifactSha256": "a55ad55dd4572aebdf9543fe47c3a835af3586780641414b928d1d9a184b4a11",
+    "status": "current",
+    "supersedes": "evidence/history/pre-signed-sandbox/video-qa.json"
+  },
+  "files": {
+    "ai-background-provenance.json": {
+      "status": "shared-foundation",
+      "artifactRevision": "pre-signed-sandbox",
+      "note": "Earlier artifact still applies to unchanged deployed contract or shared assets. Any old test-count or workflow summary is historical; current status is in README and current reports.",
+      "sha256": "a6679294e6cff3b474df0be6bb22fc2374093408357ab4bdeac3ad08f2adc196"
+    },
+    "build-hosted.txt": {
+      "status": "superseded-historical",
+      "artifactRevision": "pre-signed-sandbox",
+      "note": "Pre-signed-sandbox evidence. Retained for provenance; not current UI/video/test status.",
+      "sha256": "543de2ae271bfc79df0ad754f1ac83f927762ee7c774299b424d0dfa369de87f"
+    },
+    "build-live.txt": {
+      "status": "superseded-historical",
+      "artifactRevision": "pre-signed-sandbox",
+      "note": "Pre-signed-sandbox evidence. Retained for provenance; not current UI/video/test status.",
+      "sha256": "543de2ae271bfc79df0ad754f1ac83f927762ee7c774299b424d0dfa369de87f"
+    },
+    "build-sandbox.txt": {
+      "status": "current",
+      "artifactRevision": "v3-signed-sandbox",
+      "note": "Signed sandbox release evidence; observed results, not guarantees of future availability.",
+      "sha256": "492f997b8890fbf0861e8cff94d19e16a1051c196ec2b555c6299efa49c97d26"
+    },
+    "build.txt": {
+      "status": "superseded-historical",
+      "artifactRevision": "pre-signed-sandbox",
+      "note": "Pre-signed-sandbox evidence. Retained for provenance; not current UI/video/test status.",
+      "sha256": "543de2ae271bfc79df0ad754f1ac83f927762ee7c774299b424d0dfa369de87f"
+    },
+    "contract-tests-hosted.txt": {
+      "status": "current",
+      "artifactRevision": "v3-signed-sandbox",
+      "note": "Signed sandbox release evidence; observed results, not guarantees of future availability.",
+      "sha256": "b1e9fa4da0f1c04cef50237b02395f0c96dc44c32ed7627137bc26ca4d8904e6"
+    },
+    "contract-tests-live.txt": {
+      "status": "superseded-historical",
+      "artifactRevision": "pre-signed-sandbox",
+      "note": "Pre-signed-sandbox evidence. Retained for provenance; not current UI/video/test status.",
+      "sha256": "72d726109778f8579228dc1fda9174bcf74cca5ecf672ea618c9d5a5141c706b"
+    },
+    "contract-tests.txt": {
+      "status": "superseded-historical",
+      "artifactRevision": "pre-signed-sandbox",
+      "note": "Pre-signed-sandbox evidence. Retained for provenance; not current UI/video/test status.",
+      "sha256": "eb21b165a4ae5bdc29a3d4418d7616c0d3cb5d7e763d7cb190aec86131035056"
+    },
+    "demo-output.json": {
+      "status": "superseded-historical",
+      "artifactRevision": "pre-signed-sandbox",
+      "note": "Pre-signed-sandbox evidence. Retained for provenance; not current UI/video/test status.",
+      "sha256": "2a5b8114263b5b13c226c21e746f4bba2d38c716fca0e5dbe3b5f862d7413563"
+    },
+    "format-check.txt": {
+      "status": "current",
+      "artifactRevision": "v3-signed-sandbox",
+      "note": "Signed sandbox release evidence; observed results, not guarantees of future availability.",
+      "sha256": "5e3d1b86aa4330035091d676e549f0ce9bbde0aa9580318ebd251230f0a9a71b"
+    },
+    "history/pre-signed-sandbox/ui-qa-status.json": {
+      "status": "superseded-historical",
+      "artifactRevision": "pre-signed-sandbox",
+      "note": "Pre-signed-sandbox evidence. Retained for provenance; not current UI/video/test status.",
+      "sha256": "9c246cb35182416ae703830a6ab5cfc692214db085580a8f5f5bddefea851f4b"
+    },
+    "history/pre-signed-sandbox/video-probe.json": {
+      "status": "superseded-historical",
+      "artifactRevision": "pre-signed-sandbox",
+      "note": "Pre-signed-sandbox evidence. Retained for provenance; not current UI/video/test status.",
+      "sha256": "de4b5b5e4db5b195f64fb6ce9508ddd29b2f90fc6d2b9a9a7e6bf77e2a12bfc0"
+    },
+    "history/pre-signed-sandbox/video-qa.json": {
+      "status": "superseded-historical",
+      "artifactRevision": "pre-signed-sandbox",
+      "note": "Pre-signed-sandbox evidence. Retained for provenance; not current UI/video/test status.",
+      "sha256": "3cc3fcb6a69e511c6dafea566cb72d6788e58697222f0073d472014f19ee82ca"
+    },
+    "lint-hosted.json": {
+      "status": "current",
+      "artifactRevision": "v3-signed-sandbox",
+      "note": "Signed sandbox release evidence; observed results, not guarantees of future availability.",
+      "sha256": "194670da5dd8f98a32558ee6a85ceb9639fdb823fc53f78976784a0df1072b93"
+    },
+    "lint-live.json": {
+      "status": "superseded-historical",
+      "artifactRevision": "pre-signed-sandbox",
+      "note": "Pre-signed-sandbox evidence. Retained for provenance; not current UI/video/test status.",
+      "sha256": "f070215fa1b6d39e88880108e1b086ce944377e0948f31fafdfb5ec39d9a2831"
+    },
+    "lint.json": {
+      "status": "superseded-historical",
+      "artifactRevision": "pre-signed-sandbox",
+      "note": "Pre-signed-sandbox evidence. Retained for provenance; not current UI/video/test status.",
+      "sha256": "de382b10b578dc3e987d9d1a6ddf4c94681fc8a228662a761d13968054f264a2"
+    },
+    "live-release.json": {
+      "status": "shared-foundation",
+      "artifactRevision": "pre-signed-sandbox",
+      "note": "Earlier artifact still applies to unchanged deployed contract or shared assets. Any old test-count or workflow summary is historical; current status is in README and current reports.",
+      "sha256": "861657df8bf8d49848e9b385b686c5ac2a6d9dc00afe0ec5bbca89e47cbf0b99"
+    },
+    "node-tests-hosted.txt": {
+      "status": "superseded-historical",
+      "artifactRevision": "pre-signed-sandbox",
+      "note": "Pre-signed-sandbox evidence. Retained for provenance; not current UI/video/test status.",
+      "sha256": "329ce1d0a464f5592e039400c061644717f046d6a741f64410bc096522846a3c"
+    },
+    "node-tests-live.txt": {
+      "status": "superseded-historical",
+      "artifactRevision": "pre-signed-sandbox",
+      "note": "Pre-signed-sandbox evidence. Retained for provenance; not current UI/video/test status.",
+      "sha256": "c761de54585431984f8af7f94563fbb8cc38a9bf4e723e2fd65d3d56f5c16ca9"
+    },
+    "node-tests-sandbox.txt": {
+      "status": "current",
+      "artifactRevision": "v3-signed-sandbox",
+      "note": "Signed sandbox release evidence; observed results, not guarantees of future availability.",
+      "sha256": "10fd827cd507df26972ce5b154ef3c6ff060f9b432e8f0f5730cc9fc9931846e"
+    },
+    "node-tests.txt": {
+      "status": "superseded-historical",
+      "artifactRevision": "pre-signed-sandbox",
+      "note": "Pre-signed-sandbox evidence. Retained for provenance; not current UI/video/test status.",
+      "sha256": "fba1f29a31bb6c4eb400b720459c94ef99abedd26dd9688466e5dd0efff9a57f"
+    },
+    "package-privacy-check.json": {
+      "status": "current",
+      "artifactRevision": "v3-signed-sandbox",
+      "note": "Signed sandbox release evidence; observed results, not guarantees of future availability.",
+      "sha256": "5a11a019fda33d8b79328270c99a78da0c5fdb9d82694236b6685ea1ba388976"
+    },
+    "reference-commit.txt": {
+      "status": "shared-foundation",
+      "artifactRevision": "pre-signed-sandbox",
+      "note": "Earlier artifact still applies to unchanged deployed contract or shared assets. Any old test-count or workflow summary is historical; current status is in README and current reports.",
+      "sha256": "733a96632b7bb2def35f8896fffc099ee02526879381de34bab8da7c653ea41c"
+    },
+    "rpc-probe.json": {
+      "status": "superseded-historical",
+      "artifactRevision": "pre-signed-sandbox",
+      "note": "Pre-signed-sandbox evidence. Retained for provenance; not current UI/video/test status.",
+      "sha256": "01f5e36f17a41d40cd18e05bfd8062e4421ed977b81644a4c86702b7e64769ec"
+    },
+    "signed-accept-chain-receipt.json": {
+      "status": "current",
+      "artifactRevision": "v3-signed-sandbox",
+      "note": "Signed sandbox release evidence; observed results, not guarantees of future availability.",
+      "sha256": "d2c4b8c1e642b2c04d68995d3e2b0e4d1ec673f194ea0829e5df8a398ac747e3"
+    },
+    "signed-accept-packet.json": {
+      "status": "current",
+      "artifactRevision": "v3-signed-sandbox",
+      "note": "Signed sandbox release evidence; observed results, not guarantees of future availability.",
+      "sha256": "9085ae47a3f044f71dd9a504e147809983f680cd7a7be1f8c93da9e9cade376e"
+    },
+    "signed-accept-verified.json": {
+      "status": "current",
+      "artifactRevision": "v3-signed-sandbox",
+      "note": "Signed sandbox release evidence; observed results, not guarantees of future availability.",
+      "sha256": "de7f73ebf8e699f79db9fef2d63bc73b5a1405d024f12212205a1dea814e6049"
+    },
+    "signed-rework-chain-receipt.json": {
+      "status": "current",
+      "artifactRevision": "v3-signed-sandbox",
+      "note": "Signed sandbox release evidence; observed results, not guarantees of future availability.",
+      "sha256": "9102b2d691bc556cfb71db595cd709d1da957aba91e3795216691147693f8345"
+    },
+    "signed-rework-packet.json": {
+      "status": "current",
+      "artifactRevision": "v3-signed-sandbox",
+      "note": "Signed sandbox release evidence; observed results, not guarantees of future availability.",
+      "sha256": "5424ebdc87d311a9df826d88b120dc0e34af420f08c19b790480bf562fee204e"
+    },
+    "signed-rework-verified.json": {
+      "status": "current",
+      "artifactRevision": "v3-signed-sandbox",
+      "note": "Signed sandbox release evidence; observed results, not guarantees of future availability.",
+      "sha256": "b6d6bc780eeffdd7d42049ef98e6ae019e9c077a570cc6e419668865fc5f8408"
+    },
+    "signed-sandbox-chain-receipt.json": {
+      "status": "current",
+      "artifactRevision": "v3-signed-sandbox",
+      "note": "Signed sandbox release evidence; observed results, not guarantees of future availability.",
+      "sha256": "f05500e660d9c4afc6fa5aa12a721d24007533d2946c24f39bcb957d3088d4a2"
+    },
+    "signed-sandbox-packet.json": {
+      "status": "current",
+      "artifactRevision": "v3-signed-sandbox",
+      "note": "Signed sandbox release evidence; observed results, not guarantees of future availability.",
+      "sha256": "368f927ab79aabd8eb4c061cfc8f9aec42fd3ec4eb300e34758e83c89aa29588"
+    },
+    "signed-sandbox-verified.json": {
+      "status": "current",
+      "artifactRevision": "v3-signed-sandbox",
+      "note": "Signed sandbox release evidence; observed results, not guarantees of future availability.",
+      "sha256": "f55ce1cc093a29c356f33b39fddee30c6c380b1bdcec9893a45b74aba77e5ae6"
+    },
+    "studio-cost-observation.json": {
+      "status": "superseded-historical",
+      "artifactRevision": "pre-signed-sandbox",
+      "note": "Pre-signed-sandbox evidence. Retained for provenance; not current UI/video/test status.",
+      "sha256": "6390863711de8c3adac25b7ee805ea2606de3875d12e199d14993a65df4933af"
+    },
+    "studio-deploy-receipt.json": {
+      "status": "shared-foundation",
+      "artifactRevision": "pre-signed-sandbox",
+      "note": "Earlier artifact still applies to unchanged deployed contract or shared assets. Any old test-count or workflow summary is historical; current status is in README and current reports.",
+      "sha256": "1608fc68912f10b3d6a2cc7b45424819f274088583ced126e60df507f3c7864e"
+    },
+    "studio-deploy-request.json": {
+      "status": "shared-foundation",
+      "artifactRevision": "pre-signed-sandbox",
+      "note": "Earlier artifact still applies to unchanged deployed contract or shared assets. Any old test-count or workflow summary is historical; current status is in README and current reports.",
+      "sha256": "11817a573608339333786b8958fef327073be7d86d74746e84751fd3f3ccbbbe"
+    },
+    "studio-deploy-submitted.json": {
+      "status": "shared-foundation",
+      "artifactRevision": "pre-signed-sandbox",
+      "note": "Earlier artifact still applies to unchanged deployed contract or shared assets. Any old test-count or workflow summary is historical; current status is in README and current reports.",
+      "sha256": "b22d4b2243b5d6404dc09033f6072fa9d8b031fcc0e710e6d6ab8cb18e797b75"
+    },
+    "studio-deployment-verified.json": {
+      "status": "shared-foundation",
+      "artifactRevision": "pre-signed-sandbox",
+      "note": "Earlier artifact still applies to unchanged deployed contract or shared assets. Any old test-count or workflow summary is historical; current status is in README and current reports.",
+      "sha256": "e16719d8a97b85eab3885f6acb83fa9bf25d9429d06e57f5b3bebad96cdf08dd"
+    },
+    "studio-live-negative-verification.json": {
+      "status": "superseded-historical",
+      "artifactRevision": "pre-signed-sandbox",
+      "note": "Pre-signed-sandbox evidence. Retained for provenance; not current UI/video/test status.",
+      "sha256": "e37bb6a752adcbb9798da7fddbf79350fbd0ddcc3fdf87cca34ff1eeae8d822a"
+    },
+    "studio-live-verification.json": {
+      "status": "superseded-historical",
+      "artifactRevision": "pre-signed-sandbox",
+      "note": "Pre-signed-sandbox evidence. Retained for provenance; not current UI/video/test status.",
+      "sha256": "7dd82cf874e6c65c90aca92f2954434675952e2d41586fb71dde281686a1e91f"
+    },
+    "studio-review-receipt.json": {
+      "status": "superseded-historical",
+      "artifactRevision": "pre-signed-sandbox",
+      "note": "Pre-signed-sandbox evidence. Retained for provenance; not current UI/video/test status.",
+      "sha256": "de86aec0d2b117c55ee2987e86e5aa3dc65eb77022b15235f1b6e4d47cd7f3e8"
+    },
+    "studio-review-request.json": {
+      "status": "superseded-historical",
+      "artifactRevision": "pre-signed-sandbox",
+      "note": "Pre-signed-sandbox evidence. Retained for provenance; not current UI/video/test status.",
+      "sha256": "0e5987a98f4279cf63e65b53b9e7eda9b846716814935151b69e4c5405c92897"
+    },
+    "studio-review-signed-accept-request.json": {
+      "status": "current",
+      "artifactRevision": "v3-signed-sandbox",
+      "note": "Signed sandbox release evidence; observed results, not guarantees of future availability.",
+      "sha256": "8bb1b77e91bacf7fa74c2cb88b158019067836fa8a34ee5488cfbaad1de8a092"
+    },
+    "studio-review-signed-accept-submitted.json": {
+      "status": "current",
+      "artifactRevision": "v3-signed-sandbox",
+      "note": "Signed sandbox release evidence; observed results, not guarantees of future availability.",
+      "sha256": "4b5045b004dd87922694968bf0ba6cefa5146291c4325b73b97fa2aa86b200f9"
+    },
+    "studio-review-signed-rework-request.json": {
+      "status": "current",
+      "artifactRevision": "v3-signed-sandbox",
+      "note": "Signed sandbox release evidence; observed results, not guarantees of future availability.",
+      "sha256": "2235d07776348ed1e502be82b9f1eeb00fb40d1fae6c49a814494fafcba093b3"
+    },
+    "studio-review-signed-rework-submitted.json": {
+      "status": "current",
+      "artifactRevision": "v3-signed-sandbox",
+      "note": "Signed sandbox release evidence; observed results, not guarantees of future availability.",
+      "sha256": "a28d5804bcde7dfa782400d7d884072a5ac4bc3d8e41b6171b2f1fe81e9515fb"
+    },
+    "studio-review-signed-sandbox-request.json": {
+      "status": "current",
+      "artifactRevision": "v3-signed-sandbox",
+      "note": "Signed sandbox release evidence; observed results, not guarantees of future availability.",
+      "sha256": "ebd70522b1ccaa66fa24e8d63ce1c1badc75e4c84b7cc2cbac026ee3ba8df239"
+    },
+    "studio-review-signed-sandbox-submitted.json": {
+      "status": "current",
+      "artifactRevision": "v3-signed-sandbox",
+      "note": "Signed sandbox release evidence; observed results, not guarantees of future availability.",
+      "sha256": "dd1eacc6e9bb8b977ed164b979e18b8a588c691cb785c9127df4459ae0c6f5b7"
+    },
+    "studio-review-submitted.json": {
+      "status": "superseded-historical",
+      "artifactRevision": "pre-signed-sandbox",
+      "note": "Pre-signed-sandbox evidence. Retained for provenance; not current UI/video/test status.",
+      "sha256": "ed07b9c0a441b8549555cc5a210136e55e39aaac6808fb560668cce336d672be"
+    },
+    "studionet-network.json": {
+      "status": "superseded-historical",
+      "artifactRevision": "pre-signed-sandbox",
+      "note": "Pre-signed-sandbox evidence. Retained for provenance; not current UI/video/test status.",
+      "sha256": "584e361f1977353c359b0b527be38e3e791a6ca8cd531f7d449bdc3a3f76db8a"
+    },
+    "ui-qa-recorded.json": {
+      "status": "current",
+      "artifactRevision": "v3-signed-sandbox",
+      "note": "Signed sandbox release evidence; observed results, not guarantees of future availability.",
+      "sha256": "3469ef81687df642cb5e2907061f05613323cb072d50d54f8ebb937e4937dd0e"
+    },
+    "ui-qa-sandbox.json": {
+      "status": "current",
+      "artifactRevision": "v3-signed-sandbox",
+      "note": "Signed sandbox release evidence; observed results, not guarantees of future availability.",
+      "sha256": "907b4780b4ccca067469718b19fae2331727c3592c1d82b49d4ba675480c39fa"
+    },
+    "ui-qa-status.json": {
+      "status": "current",
+      "artifactRevision": "v3-signed-sandbox",
+      "note": "Signed sandbox release evidence; observed results, not guarantees of future availability.",
+      "sha256": "0fd1f8bd31c4cfe8cadd0890bf619a2a83b5180d49c405a8c5e873ef9c1a769e"
+    },
+    "video-probe.json": {
+      "status": "current",
+      "artifactRevision": "v3-signed-sandbox",
+      "note": "Signed sandbox release evidence; observed results, not guarantees of future availability.",
+      "sha256": "ffb7b4e08f44183e680a98aafce9ea40d2eeac21da0eb33c3ffe2750694a8a61"
+    },
+    "video-qa.json": {
+      "status": "current",
+      "artifactRevision": "v3-signed-sandbox",
+      "note": "Signed sandbox release evidence; observed results, not guarantees of future availability.",
+      "sha256": "b446ac03336c1387fc0146ed4934ddf6fac7986a16999f0d8c7ce72298f7efeb"
+    },
+    "video-render.log": {
+      "status": "superseded-historical",
+      "artifactRevision": "pre-signed-sandbox",
+      "note": "Pre-signed-sandbox evidence. Retained for provenance; not current UI/video/test status.",
+      "sha256": "873f802f49d377763f463f6ce3a0dff6afce2c925e685949e10393dd86364ced"
+    },
+    "video-workflow-qa.json": {
+      "status": "current",
+      "artifactRevision": "v3-signed-sandbox",
+      "note": "Signed sandbox release evidence; observed results, not guarantees of future availability.",
+      "sha256": "25a0f5e624a998d095ada8945d27ae1846fc101743adb4a4c9a591258705b84a"
+    }
+  }
+}

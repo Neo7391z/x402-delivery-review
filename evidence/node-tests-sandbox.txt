@@ -1,0 +1,67 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> delivery-review@1.0.0 test
+> node --import tsx --test tests/*.test.ts
+
+✔ official x402 SDK decodes v2 offer (7.07374ms)
+✔ receipt hashes exact response and terms (1.325153ms)
+✔ rejects malformed and oversized headers (0.442806ms)
+✔ rejects missing and oversized evidence (0.629266ms)
+✔ verdict drives access policy (0.278259ms)
+✔ unfinalized, failed or mismatched results fail closed (0.150095ms)
+Local demo: http://127.0.0.1:4173
+✔ HTTP packet builder, validation and read-only boundary (59.535149ms)
+✔ real HTTP workflow, signed evidence and ACCEPT controller (61.264912ms)
+✔ real HTTP workflow, signed evidence and REWORK controller (12.323527ms)
+✔ real HTTP workflow, signed evidence and ESCALATE controller (7.55221ms)
+✔ tampered body, missing signature and wrong supplier fail (8.480166ms)
+✔ untrusted offer and concurrency fail closed (4.249582ms)
+✔ missing evidence and bad relay cannot authorize (6.662542ms)
+✔ persistence failure blocks all fetches (0.488224ms)
+✔ replayed authorization is rejected by provider (7.386045ms)
+✔ restart preserves PAUSE and performs no network request (0.446351ms)
+✔ wrong client signature is rejected (7.760262ms)
+✔ RPC outage and contradictory effect fail closed (6.592606ms)
+✔ provider rejects expired authorization (3.239122ms)
+✔ provider rejects over-budget authorization (3.619455ms)
+✔ persisting an ALLOW decision fails closed (5.008183ms)
+✔ captured finalized Studio deployment: 3 agree, 2 quorum-cancelled idle (1.636621ms)
+✔ idle errors other than documented quorum cancellation remain HOLD (0.820654ms)
+✔ forged duplicate validator identity is rejected (0.577559ms)
+✔ too few independent successful votes are rejected (0.544198ms)
+✔ validated fixture ACCEPT maps to ALLOW (4.917246ms)
+✔ validated fixture REWORK maps to PAUSE (1.015287ms)
+✔ validated fixture ESCALATE maps to HOLD (0.948246ms)
+✔ wrong chain fails closed (0.70481ms)
+✔ numeric chain ID rejected fails closed (0.629677ms)
+✔ inconsistent network ID fails closed (0.768245ms)
+✔ non-final transaction fails closed (0.60531ms)
+✔ wrong transaction hash fails closed (0.594714ms)
+✔ wrong target fails closed (0.798632ms)
+✔ wrong sender fails closed (0.73079ms)
+✔ leader only fails closed (0.541915ms)
+✔ malformed calldata fails closed (0.423877ms)
+✔ wrong method fails closed (0.629276ms)
+✔ different evidence fails closed (0.770549ms)
+✔ non-final consensus fails closed (0.442356ms)
+✔ failed execution fails closed (0.610818ms)
+✔ no validators fails closed (0.576527ms)
+✔ validator disagreement fails closed (0.734415ms)
+✔ source mismatch fails closed (0.690008ms)
+✔ owner mismatch fails closed (0.575065ms)
+✔ bad decision schema fails closed (0.698741ms)
+✔ missing stored review fails closed (0.775066ms)
+✔ RPC failure fails closed (0.687153ms)
+✔ network changes during reads fails closed (0.686873ms)
+✔ invalid caller input fails before network (0.47819ms)
+✔ bounded wait fails closed (16.382311ms)
+✔ actual GenLayerJS transport decodes source and final-state reads using local RPC fixture (72.126745ms)
+✔ Studio RPC calls use checksum contract address; comparisons remain case insensitive (0.763399ms)
+ℹ tests 53
+ℹ suites 0
+ℹ pass 53
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 970.428987

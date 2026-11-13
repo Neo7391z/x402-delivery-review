@@ -1,0 +1,48 @@
+SUPERSEDED HISTORICAL / pre-signed-sandbox. See evidence/EVIDENCE_INDEX.json for current status.
+
+> delivery-review@1.0.0 test
+> node --import tsx --test tests/*.test.ts
+
+✔ official x402 SDK decodes v2 offer (4.962145ms)
+✔ receipt hashes exact response and terms (0.851962ms)
+✔ rejects malformed and oversized headers (0.356686ms)
+✔ rejects missing and oversized evidence (0.439901ms)
+✔ verdict drives access policy (0.185869ms)
+✔ unfinalized, failed or mismatched results fail closed (0.134372ms)
+Local demo: http://127.0.0.1:4173
+✔ HTTP packet builder, validation and read-only boundary (57.196099ms)
+✔ validated fixture ACCEPT maps to ALLOW (3.405132ms)
+✔ validated fixture REWORK maps to PAUSE (0.590258ms)
+✔ validated fixture ESCALATE maps to HOLD (0.479161ms)
+✔ wrong chain fails closed (0.44553ms)
+✔ numeric chain ID rejected fails closed (0.367002ms)
+✔ inconsistent network ID fails closed (0.274032ms)
+✔ non-final transaction fails closed (0.304017ms)
+✔ wrong transaction hash fails closed (0.430127ms)
+✔ wrong target fails closed (0.545571ms)
+✔ wrong sender fails closed (0.73066ms)
+✔ leader only fails closed (0.426452ms)
+✔ malformed calldata fails closed (0.409967ms)
+✔ wrong method fails closed (0.8903ms)
+✔ different evidence fails closed (0.723058ms)
+✔ non-final consensus fails closed (0.601304ms)
+✔ failed execution fails closed (0.489176ms)
+✔ no validators fails closed (0.454454ms)
+✔ validator disagreement fails closed (0.435645ms)
+✔ source mismatch fails closed (0.435225ms)
+✔ owner mismatch fails closed (0.555205ms)
+✔ bad decision schema fails closed (0.600123ms)
+✔ missing stored review fails closed (0.513743ms)
+✔ RPC failure fails closed (0.43886ms)
+✔ network changes during reads fails closed (0.643889ms)
+✔ invalid caller input fails before network (0.645501ms)
+✔ bounded wait fails closed (14.0664ms)
+✔ actual GenLayerJS transport decodes source and final-state reads using local RPC fixture (60.857305ms)
+ℹ tests 34
+ℹ suites 0
+ℹ pass 34
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 888.167457

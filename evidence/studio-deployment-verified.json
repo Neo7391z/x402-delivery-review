@@ -1,0 +1,11 @@
+{
+  "status": "FINALIZED",
+  "execution": "SUCCESS",
+  "chainId": 61999,
+  "contractAddress": "0x7e4b6EdbEC697a28Fce4F1D6a7e30Ed47B8164E6",
+  "deploymentTransaction": "0xaede5cd4578420cf69c841cce62b83abd5e150c8068053b4685a06629c67a011",
+  "owner": "0x0898cA82CDA5C0008383706230A7b6fF0b0c2618",
+  "sourceSha256": "c7acf29cd223bf3235bebf8e5434b87e6e44940d8d4a3c3c20f073a8970f747d",
+  "verifiedAt": "2026-11-13T00:03:34.803Z",
+  "environment": "public hosted Studionet simulator, not mainnet"
+}

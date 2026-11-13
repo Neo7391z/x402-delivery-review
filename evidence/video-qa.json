@@ -1,0 +1,18 @@
+{
+  "release": "v4-metadata-correction",
+  "artifactRevision": "v3-browser-workflow",
+  "artifact": "video/delivery-review-demo.mp4",
+  "artifactSha256": "a55ad55dd4572aebdf9543fe47c3a835af3586780641414b928d1d9a184b4a11",
+  "status": "current",
+  "supersedes": "evidence/history/pre-signed-sandbox/video-qa.json",
+  "durationSeconds": 40,
+  "resolution": "1280x1000",
+  "fps": 24,
+  "frames": 960,
+  "audio": "none; embedded explanatory captions",
+  "decodeErrors": 0,
+  "visualReview": "Opening, contact sheet and actual desktop/mobile captures inspected",
+  "footage": "Actual browser captures with edited timing; fresh HTTP sandbox and historical signed delivery with fresh RPC verification are distinct cases",
+  "AIProcessing": "AI-generated background composited into title/end cards; captions and screen-recording edit",
+  "claimBoundary": "Custom non-monetary x402 sandbox; hosted Studionet; local client controller; no payment, mainnet, wallet-wide revocation or jury claim"
+}

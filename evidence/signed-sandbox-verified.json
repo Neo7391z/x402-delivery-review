@@ -1,0 +1,17 @@
+{
+  "verified": false,
+  "effect": "HOLD",
+  "error": "Validator disagreement or unexplained failure",
+  "controllerState": "HOLD",
+  "nextRequestBlockedBeforeFetch": true,
+  "events": [
+    "GET → 402",
+    "Official x402 SDK → signed sandbox authorization",
+    "200 → provider signature verified → HOLD for Court",
+    "Unverified decision → HOLD",
+    "BLOCKED before fetch: HOLD",
+    "Unverified decision → HOLD",
+    "BLOCKED before fetch: HOLD"
+  ],
+  "scope": "Actual signed localhost delivery; public hosted Studionet decision; local controller only"
+}

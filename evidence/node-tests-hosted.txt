@@ -1,0 +1,53 @@
+SUPERSEDED HISTORICAL / pre-signed-sandbox. See evidence/EVIDENCE_INDEX.json for current status.
+
+> delivery-review@1.0.0 test
+> node --import tsx --test tests/*.test.ts
+
+✔ official x402 SDK decodes v2 offer (4.817617ms)
+✔ receipt hashes exact response and terms (0.911692ms)
+✔ rejects malformed and oversized headers (0.31219ms)
+✔ rejects missing and oversized evidence (0.436957ms)
+✔ verdict drives access policy (0.130126ms)
+✔ unfinalized, failed or mismatched results fail closed (0.084127ms)
+Local demo: http://127.0.0.1:4173
+✔ HTTP packet builder, validation and read-only boundary (63.583451ms)
+✔ captured finalized Studio deployment: 3 agree, 2 quorum-cancelled idle (2.03383ms)
+✔ idle errors other than documented quorum cancellation remain HOLD (0.971582ms)
+✔ forged duplicate validator identity is rejected (0.635376ms)
+✔ too few independent successful votes are rejected (0.766443ms)
+✔ validated fixture ACCEPT maps to ALLOW (4.514451ms)
+✔ validated fixture REWORK maps to PAUSE (1.062008ms)
+✔ validated fixture ESCALATE maps to HOLD (0.957911ms)
+✔ wrong chain fails closed (0.867936ms)
+✔ numeric chain ID rejected fails closed (0.773754ms)
+✔ inconsistent network ID fails closed (0.625551ms)
+✔ non-final transaction fails closed (0.808086ms)
+✔ wrong transaction hash fails closed (0.692512ms)
+✔ wrong target fails closed (0.747895ms)
+✔ wrong sender fails closed (0.83118ms)
+✔ leader only fails closed (0.629077ms)
+✔ malformed calldata fails closed (0.456126ms)
+✔ wrong method fails closed (0.746152ms)
+✔ different evidence fails closed (0.661425ms)
+✔ non-final consensus fails closed (0.444499ms)
+✔ failed execution fails closed (0.729437ms)
+✔ no validators fails closed (0.765562ms)
+✔ validator disagreement fails closed (0.555266ms)
+✔ source mismatch fails closed (0.593343ms)
+✔ owner mismatch fails closed (0.696468ms)
+✔ bad decision schema fails closed (0.660845ms)
+✔ missing stored review fails closed (0.633413ms)
+✔ RPC failure fails closed (0.55841ms)
+✔ network changes during reads fails closed (0.629197ms)
+✔ invalid caller input fails before network (0.51831ms)
+✔ bounded wait fails closed (15.622001ms)
+✔ actual GenLayerJS transport decodes source and final-state reads using local RPC fixture (58.013502ms)
+✔ Studio RPC calls use checksum contract address; comparisons remain case insensitive (0.489026ms)
+ℹ tests 39
+ℹ suites 0
+ℹ pass 39
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 783.340274

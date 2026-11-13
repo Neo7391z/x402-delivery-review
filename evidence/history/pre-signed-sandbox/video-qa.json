@@ -1,0 +1,19 @@
+{
+  "durationSeconds": 40,
+  "resolution": "1280x720",
+  "fps": 24,
+  "frames": 960,
+  "audio": "none; embedded English explanatory text",
+  "decodeErrors": 0,
+  "visualReview": "All five scene layouts inspected plus decoded frame at 39 seconds; no clipping observed",
+  "motion": "0.5-second scene crossfades and moving evidence/timeline marker",
+  "branding": "Official Internet Court, GenLayer and x402 SVG sources",
+  "AIProcessing": "OpenAI imagegen background composited into every frame",
+  "claimBoundary": "Animated presentation of actual FINALIZED hosted Studionet result; synthetic x402 case; not a screen recording or mainnet proof",
+  "_evidenceMetadata": {
+    "status": "superseded-historical",
+    "artifactRevision": "pre-signed-sandbox",
+    "currentIndex": "evidence/EVIDENCE_INDEX.json",
+    "note": "Pre-signed-sandbox evidence. Retained for provenance; not current UI/video/test status."
+  }
+}

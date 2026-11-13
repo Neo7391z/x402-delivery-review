@@ -1,0 +1,12 @@
+{
+  "rpc": "https://rpc-bradbury.genlayer.com",
+  "method": "eth_chainId",
+  "observedResult": "0x107d",
+  "scope": "read-only connectivity; no deployment or verdict",
+  "_evidenceMetadata": {
+    "status": "superseded-historical",
+    "artifactRevision": "pre-signed-sandbox",
+    "currentIndex": "evidence/EVIDENCE_INDEX.json",
+    "note": "Pre-signed-sandbox evidence. Retained for provenance; not current UI/video/test status."
+  }
+}

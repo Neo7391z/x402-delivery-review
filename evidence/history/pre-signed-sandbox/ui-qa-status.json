@@ -1,0 +1,16 @@
+{
+  "passed": false,
+  "blockers": [
+    "Chromium socket() failed: Operation not permitted",
+    "Playwright headless-shell download was invalid archive",
+    "Separate CUA browser could not reach isolated localhost"
+  ],
+  "httpIntegrationTests": "passed",
+  "script": "video/render.mjs",
+  "_evidenceMetadata": {
+    "status": "superseded-historical",
+    "artifactRevision": "pre-signed-sandbox",
+    "currentIndex": "evidence/EVIDENCE_INDEX.json",
+    "note": "Pre-signed-sandbox evidence. Retained for provenance; not current UI/video/test status."
+  }
+}

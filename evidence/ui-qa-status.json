@@ -1,0 +1,10 @@
+{
+  "status": "current",
+  "release": "v4-metadata-correction",
+  "passed": true,
+  "reports": [
+    "evidence/ui-qa-sandbox.json",
+    "evidence/ui-qa-recorded.json"
+  ],
+  "supersedes": "evidence/history/pre-signed-sandbox/ui-qa-status.json"
+}

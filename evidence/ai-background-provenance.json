@@ -1,0 +1,5 @@
+{
+  "tool": "OpenAI imagegen",
+  "prompt": "Restrained cinematic 16:9 midnight navy background, mint-teal evidence/review/access nodes on right; empty left; no text or logos",
+  "usage": "Composited and animated in video/render_video.py"
+}

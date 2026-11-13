@@ -1,0 +1,13 @@
+{
+  "chainId": 61999,
+  "rpc": "https://studio.genlayer.com/api",
+  "sdk": "genlayer-js 1.1.8",
+  "observedAt": "2026-11-12T23:39:56.416Z",
+  "scope": "Read-only network identity only; no deployment, source upload or verdict",
+  "_evidenceMetadata": {
+    "status": "superseded-historical",
+    "artifactRevision": "pre-signed-sandbox",
+    "currentIndex": "evidence/EVIDENCE_INDEX.json",
+    "note": "Pre-signed-sandbox evidence. Retained for provenance; not current UI/video/test status."
+  }
+}

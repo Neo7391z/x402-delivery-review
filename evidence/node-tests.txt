@@ -1,0 +1,21 @@
+SUPERSEDED HISTORICAL / pre-signed-sandbox. See evidence/EVIDENCE_INDEX.json for current status.
+
+> delivery-review@1.0.0 test
+> node --import tsx --test tests/*.test.ts
+
+✔ official x402 SDK decodes v2 offer (4.913961ms)
+✔ receipt hashes exact response and terms (0.898301ms)
+✔ rejects malformed and oversized headers (0.340773ms)
+✔ rejects missing and oversized evidence (0.420162ms)
+✔ verdict drives access policy (0.160782ms)
+✔ unfinalized, failed or mismatched results fail closed (0.13334ms)
+Local demo: http://127.0.0.1:4173
+✔ HTTP packet builder, validation and read-only boundary (42.5215ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 537.244964

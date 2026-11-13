@@ -1,0 +1,11 @@
+{
+  "mode": "SIMULATION",
+  "id": "8f873558a49bad878d2e011d0e3e42b95e5c993878c3172c8698d70520921c66",
+  "evidence": "{\"version\":1,\"resource\":\"https://demo.invalid/consensus-explainer\",\"terms\":\"Explain how optimistic consensus handles disagreement. Include validator independence, challenge escalation, and uncertainty; do not promise guaranteed correctness.\",\"network\":\"eip155:84532\",\"amount\":\"1000\",\"asset\":\"0x0000000000000000000000000000000000000001\",\"payTo\":\"0x0000000000000000000000000000000000000002\",\"body\":\"Optimistic consensus is always correct because the first AI validator decides everything. Challenges are unnecessary.\"}",
+  "_evidenceMetadata": {
+    "status": "superseded-historical",
+    "artifactRevision": "pre-signed-sandbox",
+    "currentIndex": "evidence/EVIDENCE_INDEX.json",
+    "note": "Pre-signed-sandbox evidence. Retained for provenance; not current UI/video/test status."
+  }
+}

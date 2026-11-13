@@ -1,0 +1,23 @@
+{
+  "programs": [],
+  "stream_groups": [],
+  "streams": [
+    {
+      "codec_name": "h264",
+      "width": 1280,
+      "height": 1000,
+      "r_frame_rate": "24/1",
+      "nb_frames": "960"
+    }
+  ],
+  "format": {
+    "duration": "40.000000",
+    "size": "887337"
+  },
+  "release": "v4-metadata-correction",
+  "artifactRevision": "v3-browser-workflow",
+  "artifact": "video/delivery-review-demo.mp4",
+  "artifactSha256": "a55ad55dd4572aebdf9543fe47c3a835af3586780641414b928d1d9a184b4a11",
+  "status": "current",
+  "supersedes": "evidence/history/pre-signed-sandbox/video-qa.json"
+}

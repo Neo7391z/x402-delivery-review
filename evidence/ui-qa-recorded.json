@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "browser": "Official Chrome headless shell 157",
+  "mode": "recorded",
+  "errors": [],
+  "imagesLoaded": true,
+  "mobileOverflow": false,
+  "before": "Recorded: GET → 402 → authorization → signed delivery\nCourt REWORK → PAUSE\nProvider requests this session: 0 / deliveries: 0",
+  "after": "Recorded: GET → 402 → authorization → signed delivery\nCourt REWORK → PAUSE\nBLOCKED before fetch: PAUSE\nProvider requests this session: 0 / deliveries: 0"
+}

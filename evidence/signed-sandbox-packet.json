@@ -1,0 +1,35 @@
+{
+  "id": "d7ee564e6d7f2a24020f51993bde721bded2cf20dac036bd4f7013e837b95216",
+  "evidence": "{\"actionReceipts\":[{\"data\":{\"actionId\":\"483d8f75-a464-4d5c-b687-89b2d38d0756\",\"authorization\":{\"data\":{\"challengeHash\":\"e66b2ddea98590117f3213e97722760ca629c3f6a415bfe07fd9cbd3f1ff4b3d\",\"mandateHash\":\"c1f4e49bacdfe942ac4afae9c97b8c12bf782f904a487709ad0a52c3bd21f5f2\",\"nonce\":\"458e2bcc-f09c-4f76-bbaf-60477b9d0256\"},\"signature\":\"Fvu9mQSjp4p4Uk7PpgKBSh0ibBVILAVq41wGc19LEaTkSVXUeAw3U0poadF5alEa/sdxzfrcVHpnKpdMgqbpCw==\"},\"body\":\"Optimistic consensus is always correct because the first AI validator decides everything. Challenges are unnecessary.\",\"bodyHash\":\"9582a21bc0a88f59bc03787caf18459b9a5c32190e18cbd53291e491bd9e1717\",\"challenge\":{\"data\":{\"client\":\"-----BEGIN PUBLIC KEY-----\\nMCowBQYDK2VwAyEAgCvA6B/Aye2/ve7qqB1KdUrbLxTw9RchJ9N1fYTmIks=\\n-----END PUBLIC KEY-----\\n\",\"expires\":1794531159621,\"mandateHash\":\"c1f4e49bacdfe942ac4afae9c97b8c12bf782f904a487709ad0a52c3bd21f5f2\",\"nonce\":\"458e2bcc-f09c-4f76-bbaf-60477b9d0256\",\"resource\":\"sandbox://consensus-explainer\",\"terms\":\"Explain how optimistic consensus handles disagreement. Include validator independence, challenge escalation, and uncertainty; do not promise guaranteed correctness.\"},\"signature\":\"nXEn44y91SCF2fLvy1HBHTqoy/QTfYVB88wogcZNbwP5PXEV1dg9nCIuSbPC4ADntDEJrTDW4eoSaW7EQ/0NAw==\"},\"cost\":\"0 real currency; 1 sandbox authorization\",\"issuedAt\":\"2026-11-13T00:51:39.641Z\",\"provider\":\"-----BEGIN PUBLIC KEY-----\\nMCowBQYDK2VwAyEAt7X1KRf/dpyvcIfKH+YVaEDe3sU3dxbBUfj8n1bEZ6I=\\n-----END PUBLIC KEY-----\\n\"},\"signature\":\"8NlhTkcgI2Y9GhqlAoC3DEwvtKaBC9Sir2/7zTyaf0aGWVAvvaMR8ecxjb4G9lLgo6M2XM5OD9IUN0K8aAA9Bg==\"}],\"amount\":\"1\",\"asset\":\"NO-MONEY\",\"body\":\"Optimistic consensus is always correct because the first AI validator decides everything. Challenges are unnecessary.\",\"costs\":{\"nativeGasSpent\":\"0\",\"tokenSpent\":\"0\",\"txCount\":0},\"mandate\":{\"authoritySummary\":\"One non-monetary sandbox delivery per review; local client controller only\",\"fallback\":\"HOLD pending human review\",\"mandateId\":\"consensus-explainer-v2\",\"objective\":\"Explain how optimistic consensus handles disagreement. Include validator independence, challenge escalation, and uncertainty; do not promise guaranteed correctness.\",\"prohibitedActions\":[\"Real payments\",\"Unsigned delivery\",\"Retry before finalized review\",\"Ignore provider identity\"],\"reviewCadence\":\"Every delivery\",\"rubric\":[\"Relevance to optimistic consensus\",\"Independent validators\",\"Challenge escalation\",\"Honest uncertainty\",\"Complete signed evidence\",\"Zero financial spend\"]},\"network\":\"sandbox:court\",\"outputs\":[{\"artifactId\":\"9582a21bc0a88f59bc03787caf18459b9a5c32190e18cbd53291e491bd9e1717\",\"summary\":\"Delivered explanation\"}],\"payTo\":\"5f7d5a12c474ab42902e8a978549024c668304a1e3ad672b607f16288fafd668\",\"priorDecisions\":[],\"resource\":\"sandbox://consensus-explainer\",\"terms\":\"Explain how optimistic consensus handles disagreement. Include validator independence, challenge escalation, and uncertainty; do not promise guaranteed correctness.\",\"version\":1}",
+  "receipt": {
+    "data": {
+      "actionId": "483d8f75-a464-4d5c-b687-89b2d38d0756",
+      "challenge": {
+        "data": {
+          "nonce": "458e2bcc-f09c-4f76-bbaf-60477b9d0256",
+          "expires": 1794531159621,
+          "mandateHash": "c1f4e49bacdfe942ac4afae9c97b8c12bf782f904a487709ad0a52c3bd21f5f2",
+          "resource": "sandbox://consensus-explainer",
+          "terms": "Explain how optimistic consensus handles disagreement. Include validator independence, challenge escalation, and uncertainty; do not promise guaranteed correctness.",
+          "client": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAgCvA6B/Aye2/ve7qqB1KdUrbLxTw9RchJ9N1fYTmIks=\n-----END PUBLIC KEY-----\n"
+        },
+        "signature": "nXEn44y91SCF2fLvy1HBHTqoy/QTfYVB88wogcZNbwP5PXEV1dg9nCIuSbPC4ADntDEJrTDW4eoSaW7EQ/0NAw=="
+      },
+      "authorization": {
+        "data": {
+          "challengeHash": "e66b2ddea98590117f3213e97722760ca629c3f6a415bfe07fd9cbd3f1ff4b3d",
+          "nonce": "458e2bcc-f09c-4f76-bbaf-60477b9d0256",
+          "mandateHash": "c1f4e49bacdfe942ac4afae9c97b8c12bf782f904a487709ad0a52c3bd21f5f2"
+        },
+        "signature": "Fvu9mQSjp4p4Uk7PpgKBSh0ibBVILAVq41wGc19LEaTkSVXUeAw3U0poadF5alEa/sdxzfrcVHpnKpdMgqbpCw=="
+      },
+      "body": "Optimistic consensus is always correct because the first AI validator decides everything. Challenges are unnecessary.",
+      "bodyHash": "9582a21bc0a88f59bc03787caf18459b9a5c32190e18cbd53291e491bd9e1717",
+      "provider": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAt7X1KRf/dpyvcIfKH+YVaEDe3sU3dxbBUfj8n1bEZ6I=\n-----END PUBLIC KEY-----\n",
+      "cost": "0 real currency; 1 sandbox authorization",
+      "issuedAt": "2026-11-13T00:51:39.641Z"
+    },
+    "signature": "8NlhTkcgI2Y9GhqlAoC3DEwvtKaBC9Sir2/7zTyaf0aGWVAvvaMR8ecxjb4G9lLgo6M2XM5OD9IUN0K8aAA9Bg=="
+  },
+  "mode": "Actual localhost HTTP; custom non-monetary x402 scheme; no settlement"
+}
