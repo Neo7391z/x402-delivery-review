@@ -7,8 +7,8 @@ Source: https://portal-admin.genlayer.foundation/api/v1/missions/101/ (public AP
 | Internet Court partner integration | x402 is listed by Internet Court; official `@x402/core` 2.31.0 client and HTTP codecs drive a real 402/authorization/200 exchange | Custom non-monetary scheme; not standard ERC-20 payment or live merchant |
 | Meaningful GenLayer | Real Intelligent Contract evaluates semantic fulfillment; exact verified decision controls the next HTTP request | Trusted hosted RPC and local controller; strict dissent policy may hold an otherwise majority-finalized decision |
 | Reproducible skill or interface | Existing no-signing UI plus `demo:fresh` command completing a new signer/deployment/delivery/review/effect flow | Network service and model availability; fresh run may safely end HOLD |
-| Clean documented public code | Public baseline commit verified; typed/formatted code, tests, docs and a prepared v5 update | v5 must be pushed after review; baseline is already public |
-| Polished AI-edited video ≤45s, 3 logos | Existing public 40s browser-workflow video; AI-generated composited background, captions and three official logos | Video predates fresh CLI; it explicitly separates its two shown cases and does not claim to film new CLI deployment |
+| Clean documented public code | v5 code, tests, docs and fresh-run evidence published in commit `96c43c7b52d9132f3da8d757a23fa2e43e936062`; 66 tests, build and formatting passed | Public source is available; mission submission and eligibility remain separate |
+| Polished AI-edited video ≤45s, 3 logos | Existing public 40s browser-workflow video; AI-generated composited background, captions and three official logos | Video predates the v5 fresh CLI and shows the earlier browser workflow, not a new CLI deployment; fresh v5 end-to-end execution is evidenced separately under `evidence/v5/fresh-success/` |
 | Account eligibility | Mission API requires Discord role `builder-wg` | Confirm the user's linked account and role in the portal; this code cannot establish membership |
 
 ## What was over-interpreted earlier
