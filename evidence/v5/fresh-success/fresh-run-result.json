@@ -1,0 +1,46 @@
+{
+  "runId": "2026-11-15T10-18-19-374Z-a5122814",
+  "scenario": "bad",
+  "network": 61999,
+  "deploymentHash": "0x0720e026d25221e16a0f77000f42a6f233fd53409b411cf1a4a86f60614781c9",
+  "contractAddress": "0x12daD2fB0C1e4469E0Bd99AfA6721c403cc52c95",
+  "operator": "0x219a2eda358f939537932d12daec5A84d65942d8",
+  "evidenceId": "28e1aa08e6ba27c95b932da6adc31619b50a2e88eec365907c91b00d8f39fd62",
+  "reviewTransactionHash": "0xdb604b2cba0d9f5b5d13b59bdf4c6ebc5a7a3724391679d3a04285d807351890",
+  "verification": {
+    "verified": true,
+    "effect": "PAUSE",
+    "decision": "REWORK",
+    "reason": "Body claims 'always correct' and 'challenges unnecessary', directly contradicting terms requiring validator independence, challenge escalation, uncertainty, and no guaranteed correctness. Zero coverage of mandated topics.",
+    "evidenceId": "28e1aa08e6ba27c95b932da6adc31619b50a2e88eec365907c91b00d8f39fd62",
+    "transactionHash": "0xdb604b2cba0d9f5b5d13b59bdf4c6ebc5a7a3724391679d3a04285d807351890",
+    "contractAddress": "0x12daD2fB0C1e4469E0Bd99AfA6721c403cc52c95",
+    "sourceSha256": "c7acf29cd223bf3235bebf8e5434b87e6e44940d8d4a3c3c20f073a8970f747d",
+    "chainId": 61999,
+    "rpc": "https://studio.genlayer.com/api",
+    "trust": "trusted-studionet-rpc",
+    "consensus": {
+      "agree": 3,
+      "idle": 2,
+      "total": 5,
+      "independentAgree": 3,
+      "leaderAddress": "0x628f4d491b8753be1ed022f6d920853b8b541937"
+    },
+    "checkedAt": "2026-11-15T10:20:15.874Z"
+  },
+  "controllerState": "PAUSE",
+  "requestCountBeforeAttempt": 2,
+  "requestCountAfterAttempt": 2,
+  "nextRequestBlockedBeforeFetch": true,
+  "nextDeliveryCompleted": false,
+  "events": [
+    "GET → 402",
+    "Official x402 SDK → signed sandbox authorization",
+    "200 → provider signature verified → HOLD for Court",
+    "Court REWORK → PAUSE",
+    "BLOCKED before fetch: PAUSE"
+  ],
+  "value": "0",
+  "gasPrice": "0",
+  "scope": "Fresh signed HTTP delivery; public hosted Studionet; local controller; no real payment, jury case or wallet-wide revocation"
+}

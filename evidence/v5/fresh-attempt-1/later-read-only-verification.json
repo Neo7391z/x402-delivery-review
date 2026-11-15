@@ -1,0 +1,21 @@
+{
+  "verified": true,
+  "effect": "PAUSE",
+  "decision": "REWORK",
+  "reason": "The answer promises guaranteed correctness ('always correct'), explicitly violating the terms. It says the first validator decides everything and challenges are unnecessary, failing to explain validator independence, challenge escalation, or uncertainty.",
+  "evidenceId": "2cc345228dbfb297564abbed5927ed57ca48c84fc8750039d4ee60e8c7b6c3cf",
+  "transactionHash": "0x1737a7ebdf55bc0ebe4a45580265d488e7b01341c24e17d78c7e0c8f082f330a",
+  "contractAddress": "0x0d7E94bb07e63Df90E8F7d694657FC31D77a2A72",
+  "sourceSha256": "c7acf29cd223bf3235bebf8e5434b87e6e44940d8d4a3c3c20f073a8970f747d",
+  "chainId": 61999,
+  "rpc": "https://studio.genlayer.com/api",
+  "trust": "trusted-studionet-rpc",
+  "consensus": {
+    "agree": 3,
+    "idle": 2,
+    "total": 5,
+    "independentAgree": 2,
+    "leaderAddress": "0x173a86dbe046c0c6aa3a48bb8dd9d20c001a2ac1"
+  },
+  "checkedAt": "2026-11-15T10:12:11.898Z"
+}

@@ -1,0 +1,21 @@
+{
+  "mode": "review",
+  "rpc": "https://studio.genlayer.com/api",
+  "chain": "0xf22f",
+  "network": "61999",
+  "gasPrice": "0",
+  "operator": "0x219a2eda358f939537932d12daec5A84d65942d8",
+  "recipient": "0x12daD2fB0C1e4469E0Bd99AfA6721c403cc52c95",
+  "consensusTarget": "0xb7278A61aa25c888815aFC32Ad3cC52fF24fE575",
+  "value": "0",
+  "gasLimit": "0x7a120",
+  "nonce": "0x1",
+  "balanceBefore": "0x0",
+  "sourceSha256": "c7acf29cd223bf3235bebf8e5434b87e6e44940d8d4a3c3c20f073a8970f747d",
+  "leaderOnly": false,
+  "validators": 5,
+  "rotations": 3,
+  "status": "SUBMITTED",
+  "createdAt": "2026-11-15T10:19:14.460Z",
+  "transactionHash": "0xdb604b2cba0d9f5b5d13b59bdf4c6ebc5a7a3724391679d3a04285d807351890"
+}

@@ -1,0 +1,13 @@
+{
+  "mode": "PLAN ONLY — no signing or remote writes",
+  "scenario": "bad",
+  "steps": [
+    "Check chain 61999 and zero gas price",
+    "Create isolated disposable signer and deploy pinned source",
+    "Perform fresh signed HTTP delivery",
+    "Review this exact evidence on new contract",
+    "Verify FINALIZED decision and attempt next request"
+  ],
+  "execute": "npm run demo:fresh -- --authorized-studionet-only --scenario=bad",
+  "scope": "Public hosted Studionet; synthetic evidence; custom non-monetary x402 scheme; no production keys or money"
+}

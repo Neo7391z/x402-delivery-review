@@ -37,26 +37,38 @@ export function validateStudioConsensus(tx: Obj) {
     throw Error("Ambiguous leader receipts");
   const leader = leaders[0],
     leaderAddress = addr(obj(leader.node_config).address);
+  const leaderVote = normalized.get(leaderAddress);
   if (
     leader.execution_result !== "SUCCESS" ||
-    normalized.get(leaderAddress) !== "agree"
+    !["agree", "idle"].includes(String(leaderVote))
   )
     throw Error("Leader execution did not succeed");
-  for (const r of receipts) {
-    if (r === leader) continue;
+  const selfReceipts = receipts.filter((r) => r !== leader);
+  // Studio may cancel the leader's *self-validation*, after three independent
+  // validators agree. This is not a failed leader execution or an agree vote.
+  if (leaderVote === "idle" && selfReceipts.length !== 1)
+    throw Error("Missing leader self-validation cancellation proof");
+  for (const r of selfReceipts) {
     if (
       r.mode !== "validator" ||
-      r.execution_result !== "SUCCESS" ||
-      r.vote !== "agree" ||
-      addr(obj(r.node_config).address) !== leaderAddress
+      addr(obj(r.node_config).address) !== leaderAddress ||
+      r.vote !== leaderVote
     )
       throw Error("Invalid leader self-validation receipt");
+    if (r.vote === "agree" && r.execution_result === "SUCCESS") continue;
+    if (
+      r.vote === "idle" &&
+      r.execution_result === "ERROR" &&
+      obj(r.genvm_result).error_code === "CONSENSUS_VALIDATOR_QUORUM_REACHED"
+    )
+      continue;
+    throw Error("Invalid leader self-validation receipt");
   }
   if (!Array.isArray(c.validators) || c.validators.length !== 4)
     throw Error("Missing independent validator receipts");
   const seen = new Set([leaderAddress]);
-  let agree = 1,
-    idle = 0;
+  let agree = leaderVote === "agree" ? 1 : 0,
+    idle = leaderVote === "idle" ? 1 : 0;
   for (const raw of c.validators) {
     const v = obj(raw),
       a = addr(obj(v.node_config).address);
@@ -84,5 +96,11 @@ export function validateStudioConsensus(tx: Obj) {
   }
   if (agree < 3 || seen.size !== 5)
     throw Error("Insufficient independent quorum");
-  return { agree, idle, total: 5, independentAgree: agree - 1, leaderAddress };
+  return {
+    agree,
+    idle,
+    total: 5,
+    independentAgree: agree - (leaderVote === "agree" ? 1 : 0),
+    leaderAddress,
+  };
 }

@@ -1,0 +1,32 @@
+{
+  "checkedDate": "2026-11-15",
+  "publicRepository": "https://github.com/Neo7391z/x402-delivery-review",
+  "publicCommit": "1631ce77e4ce329156c97224707ad7b2fb5c1bdd",
+  "publicVideoSha256": "a55ad55dd4572aebdf9543fe47c3a835af3586780641414b928d1d9a184b4a11",
+  "internetCourtSkillCommit": "462bf30efaea73c8af4ed9d6e9970d4495224ad2",
+  "adapters": [
+    "integrations/genlayer-intelligent-contracts/SKILL.md",
+    "integrations/x402-erc7710/SKILL.md"
+  ],
+  "partnerPackage": {
+    "name": "@x402/core",
+    "version": "2.31.0",
+    "repository": "https://github.com/x402-foundation/x402"
+  },
+  "genlayerPackage": {
+    "name": "genlayer-js",
+    "version": "1.1.8",
+    "repository": "https://github.com/genlayerlabs/genlayer-js"
+  },
+  "initialLocalDifferences": [
+    "README.md",
+    "SHA256SUMS",
+    "evidence/video-render.log",
+    "evidence/EVIDENCE_INDEX.json"
+  ],
+  "publicOnlyAssetsToPreserve": [
+    "delivery-review-demo.mp4",
+    "delivery-review-source.zip"
+  ],
+  "newVersionPublished": false
+}

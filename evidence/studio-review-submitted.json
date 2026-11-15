@@ -20,8 +20,8 @@
   "transactionHash": "0xaffb7f89dd3bb2137377aa15e1217e8f1005efca353573972c1ea36fb265c10f",
   "_evidenceMetadata": {
     "status": "superseded-historical",
-    "artifactRevision": "pre-signed-sandbox",
+    "artifactRevision": "prior-release",
     "currentIndex": "evidence/EVIDENCE_INDEX.json",
-    "note": "Pre-signed-sandbox evidence. Retained for provenance; not current UI/video/test status."
+    "note": "Prior-release evidence retained for provenance; not current UI/video/test status."
   }
 }

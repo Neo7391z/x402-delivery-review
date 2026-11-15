@@ -1,0 +1,18 @@
+{
+  "observations": [
+    {
+      "transactionHash": "0x0720e026d25221e16a0f77000f42a6f233fd53409b411cf1a4a86f60614781c9",
+      "status": "0x1",
+      "effectiveGasPrice": "0x0"
+    },
+    {
+      "transactionHash": "0xdb604b2cba0d9f5b5d13b59bdf4c6ebc5a7a3724391679d3a04285d807351890",
+      "status": "0x1",
+      "effectiveGasPrice": "0x0"
+    }
+  ],
+  "balanceAfter": "0x0",
+  "submittedValue": "0",
+  "submittedGasPrice": "0",
+  "scope": "Hosted Studionet only; no user wallet or real funds"
+}

@@ -3,9 +3,7 @@ import fs from "node:fs/promises";
 import { server } from "../src/server.ts";
 const mode = process.env.UI_MODE || "sandbox",
   browser = await chromium.launch({
-    executablePath:
-      process.env.CHROME_PATH ||
-      "/tmp/delivery-browser/chrome-headless-shell-linux64/chrome-headless-shell",
+    executablePath: process.env.CHROME_PATH || chromium.executablePath(),
     headless: true,
     args: ["--no-sandbox", "--disable-dev-shm-usage"],
   });

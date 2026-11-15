@@ -287,3 +287,32 @@ test("persisting an ALLOW decision fails closed", async () => {
     await p.close();
   }
 });
+
+test("a valid old signed receipt cannot replace the current delivery", async () => {
+  const c = new ControlledClient(),
+    p = new SandboxProvider(c.keys.publicKey);
+  try {
+    const url = await p.listen();
+    await c.purchase(url, p.keys.publicKey);
+    const oldReceipt = c.receipt!;
+    const original = p.server.listeners("request")[0] as (
+      req: any,
+      res: any,
+    ) => void;
+    p.server.removeAllListeners("request");
+    p.server.on("request", (req, res) => {
+      if (req.headers["payment-signature"]) {
+        res.setHeader("Content-Type", "application/json");
+        res.end(JSON.stringify(oldReceipt));
+      } else original(req, res);
+    });
+    c.state = "ALLOW";
+    await assert.rejects(
+      c.purchase(url, p.keys.publicKey),
+      /not bound to this request/,
+    );
+    assert.equal(c.state, "HOLD");
+  } finally {
+    await p.close();
+  }
+});

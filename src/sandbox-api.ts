@@ -6,9 +6,14 @@ import {
 } from "./sandbox.js";
 import { readFile } from "node:fs/promises";
 import { createPublicKey } from "node:crypto";
-import { sha256 } from "./verify.js";
+import { sha256, verifyFinalDecision } from "./verify.js";
 let current:
-  | { client: ControlledClient; provider: SandboxProvider; url: string }
+  | {
+      client: ControlledClient;
+      provider: SandboxProvider;
+      url: string;
+      mode: string;
+    }
   | undefined;
 let busy = false;
 export async function sandboxAction(action: string) {
@@ -23,7 +28,12 @@ export async function sandboxAction(action: string) {
       const client = new ControlledClient(),
         provider = new SandboxProvider(client.keys.publicKey),
         url = await provider.listen();
-      current = { client, provider, url };
+      current = {
+        client,
+        provider,
+        url,
+        mode: "Real localhost HTTP; sandbox authorization; no payment",
+      };
       await client.purchase(url, provider.keys.publicKey);
     } else if (action === "recorded") {
       if (current) throw Error("Existing mandate cannot be replaced");
@@ -43,7 +53,12 @@ export async function sandboxAction(action: string) {
       const client = new ControlledClient(undefined, state, keys),
         provider = new SandboxProvider(publicKey),
         url = await provider.listen();
-      current = { client, provider, url };
+      current = {
+        client,
+        provider,
+        url,
+        mode: "Historical signed HTTP delivery; fresh Studionet verification",
+      };
       validateReceipt(
         client.receipt!,
         client.receipt!.data.provider,
@@ -63,14 +78,20 @@ export async function sandboxAction(action: string) {
             "utf8",
           ),
         );
-      await client.review({
-        contractAddress: deployment.contractAddress,
-        operatorAddress: submission.operator,
-        transactionHash: submission.transactionHash,
-        sourceSha256: sha256(
-          await readFile(new URL("contracts/delivery_review.py", root), "utf8"),
-        ),
-      });
+      await client.review(
+        {
+          contractAddress: deployment.contractAddress,
+          operatorAddress: submission.operator,
+          transactionHash: submission.transactionHash,
+          sourceSha256: sha256(
+            await readFile(
+              new URL("contracts/delivery_review.py", root),
+              "utf8",
+            ),
+          ),
+        },
+        (input) => verifyFinalDecision(input, undefined, 45000),
+      );
     } else if (action === "retry") {
       if (!current) throw Error("Start a mandate first");
       try {
@@ -84,10 +105,7 @@ export async function sandboxAction(action: string) {
     } else throw Error("Unknown action");
     const { client, provider } = current!;
     return {
-      mode:
-        action === "recorded"
-          ? "Historical signed HTTP delivery; fresh Studionet verification"
-          : "Real localhost HTTP; sandbox authorization; no payment",
+      mode: current!.mode,
       state: client.state,
       events: client.events,
       providerRequestsThisSession: provider.requests,

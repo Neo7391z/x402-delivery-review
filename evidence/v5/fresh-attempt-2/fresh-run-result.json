@@ -1,0 +1,30 @@
+{
+  "runId": "2026-11-15T10-13-23-507Z-4f2709c1",
+  "scenario": "bad",
+  "network": 61999,
+  "deploymentHash": "0xf9048f8f1dee734a9b72f816d71e605e788f44e1221cdb5f6ec4fff884c30291",
+  "contractAddress": "0xCd4938F7D639202e42a358AC6c3310CD379389A1",
+  "operator": "0xD9A3CA28106c4fBbcaaD6C10163f67cF428480ca",
+  "evidenceId": "533ff7357265c54621a2b59c0eff701f01264b48cbd487a33dcbf56f85850e42",
+  "reviewTransactionHash": "0x3d01c8610d938c68613da826437ce811afe6af69bb735ba4ac6f776415791bbd",
+  "verification": {
+    "verified": false,
+    "effect": "HOLD",
+    "error": "Leader execution did not succeed"
+  },
+  "controllerState": "HOLD",
+  "requestCountBeforeAttempt": 2,
+  "requestCountAfterAttempt": 2,
+  "nextRequestBlockedBeforeFetch": true,
+  "nextDeliveryCompleted": false,
+  "events": [
+    "GET → 402",
+    "Official x402 SDK → signed sandbox authorization",
+    "200 → provider signature verified → HOLD for Court",
+    "Unverified decision → HOLD",
+    "BLOCKED before fetch: HOLD"
+  ],
+  "value": "0",
+  "gasPrice": "0",
+  "scope": "Fresh signed HTTP delivery; public hosted Studionet; local controller; no real payment, jury case or wallet-wide revocation"
+}

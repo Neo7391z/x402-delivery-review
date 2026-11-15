@@ -41,3 +41,9 @@ Choose **Run real HTTP sandbox** then **Attempt next request**: real 402/authori
 Recorded signed case: the UI uses public receipt data and fresh RPC verification, without private keys. Its observer controller cannot authorize a new signature. Private local signer/state are required only to continue the original CLI controller. `node --import tsx src/sandbox-run.ts verify signed-sandbox` performs fresh RPC verification and attempts the next request. Public reviewers can inspect signed receipts with `validateReceipt`, and use read-only `verifyFinalDecision` on the packet without any signer. Creating a new own sandbox needs no real funds. Deployment/submission scripts require explicit authorized flags and reject nonzero gas price/network mismatch.
 
 Comparison baseline: AgentScore (https://github.com/Leokings/agentscore) integrates real Court case history and has a broader public deployment. This project addresses API-delivery enforcement instead. We do not claim its jury coverage, transaction count, production reach or external merchant adoption.
+
+## Fresh full-loop entry point (v5)
+
+`npm run demo:fresh -- --authorized-studionet-only --scenario=bad` creates its own demo signer and contract, then performs delivery, exact review and the next-request attempt in one process. See FRESH_RUN.md. The earlier original-controller restoration instructions are optional historical reproduction, not a dependency for new reviewers.
+
+Studio compatibility: a successful leader may have its separate self-validation canceled after three independent validators agree. Only explicit CONSENSUS_VALIDATOR_QUORUM_REACHED proof is accepted; an idle vote is never counted as agreement. Captured receipt and negative regressions are included. Current-request authorization binding prevents replaying a valid older signed delivery.

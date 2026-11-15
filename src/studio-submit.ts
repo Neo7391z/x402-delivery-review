@@ -1,4 +1,7 @@
 /** Explicitly authorized disposable Studionet demo. Never imports user wallet keys. */
+import { resolve, sep } from "node:path";
+import { pathToFileURL } from "node:url";
+import { assertFreeStudio } from "./studio-safety.js";
 import { abi, createAccount, generatePrivateKey } from "genlayer-js";
 import { studionet } from "genlayer-js/chains";
 import { encodeFunctionData, zeroAddress, keccak256 } from "viem";
@@ -14,8 +17,16 @@ const caseName = process.argv[4];
 if (caseName && !/^[a-z0-9-]{1,40}$/.test(caseName))
   throw Error("Invalid case name");
 const run = caseName ? `${mode}-${caseName}` : mode;
-const root = new URL("../", import.meta.url),
-  local = new URL(".local/", root);
+const projectRoot = new URL("../", import.meta.url);
+const requestedRoot = process.env.DELIVERY_DEMO_RUN_ROOT;
+const allowedRoot =
+  resolve(new URL(".local/fresh-runs/", projectRoot).pathname) + sep;
+if (requestedRoot && !resolve(requestedRoot).startsWith(allowedRoot))
+  throw Error("Run root must be an isolated local fresh-run directory");
+const root = requestedRoot
+  ? pathToFileURL(resolve(requestedRoot) + sep)
+  : projectRoot;
+const local = new URL(".local/", root);
 await mkdir(local, { recursive: true, mode: 0o700 });
 let id = 1;
 async function rpc(method: string, params: unknown[] = []): Promise<any> {
@@ -35,22 +46,7 @@ async function rpc(method: string, params: unknown[] = []): Promise<any> {
   if (!("result" in o)) throw Error("Missing RPC result");
   return o.result;
 }
-async function zeroCostNetwork() {
-  const [chain, network, gasPrice] = await Promise.all([
-    rpc("eth_chainId"),
-    rpc("net_version"),
-    rpc("eth_gasPrice"),
-  ]);
-  if (
-    chain !== "0xf22f" ||
-    network !== "61999" ||
-    gasPrice !== "0x0" ||
-    studionet.id !== Number(STUDIO_CHAIN_ID) ||
-    studionet.rpcUrls.default.http[0] !== STUDIO_RPC
-  )
-    throw Error("STOP: wrong network or nonzero/unknown gas price");
-  return { chain, network, gasPrice };
-}
+const zeroCostNetwork = () => assertFreeStudio(rpc);
 await zeroCostNetwork();
 const keyPath = new URL("studionet-demo-signer.json", local);
 let signer: {

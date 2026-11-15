@@ -1,0 +1,40 @@
+{
+  "hash": "0x3d01c8610d938c68613da826437ce811afe6af69bb735ba4ac6f776415791bbd",
+  "status": "FINALIZED",
+  "result": "MAJORITY_AGREE",
+  "leader": [
+    {
+      "execution": "SUCCESS",
+      "error": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      },
+      "nondet": null
+    },
+    {
+      "execution": "ERROR",
+      "error": {
+        "stderr": "Validator execution cancelled after quorum",
+        "stdout": "",
+        "raw_error": {
+          "fatal": false,
+          "causes": [
+            "VALIDATOR_QUORUM_REACHED"
+          ]
+        },
+        "error_code": "CONSENSUS_VALIDATOR_QUORUM_REACHED"
+      },
+      "nondet": null
+    }
+  ],
+  "votes": {
+    "0x7d74A02562B3C443A6b12FE7996Bc5c9A578554E": "agree",
+    "0x7eFf7A59cf5cF0aA88817b5683d3F99caac1D4F9": "idle",
+    "0xCCE41534BAa355c2C268Ebd9EFE4a9D395cd659B": "agree",
+    "0xE826F4232546894b7F1C6939309f22334de6d68a": "agree",
+    "0xeA908540c5FBB68Da844cC1BE5eaC8b23391e908": "idle"
+  }
+}

@@ -1,3 +1,4 @@
+SUPERSEDED HISTORICAL / prior-release. See evidence/EVIDENCE_INDEX.json for current status.
 SUPERSEDED HISTORICAL / pre-signed-sandbox. See evidence/EVIDENCE_INDEX.json for current status.
 .....                                                                    [100%]
 5 passed in 0.13s

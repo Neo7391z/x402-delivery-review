@@ -1,0 +1,305 @@
+WARNING: File `gltest.config.yaml` not found in the current directory, using default config, create a `gltest.config.yaml` file to manage multiple networks
+INFO: Clearing artifacts directory: artifacts
+INFO: Using the following configuration:
+INFO:   RPC URL: http://127.0.0.1:4000/api
+INFO:   Selected Network: localnet
+INFO:   Available networks: ['localnet', 'studionet', 'testnet_asimov', 'testnet_bradbury']
+INFO:   Selected chain type: localnet
+INFO:   Available chains: localnet, studionet, testnet_asimov, testnet_bradbury
+INFO:   Contracts directory: contracts
+INFO:   Artifacts directory: artifacts
+INFO:   Environment: .env
+INFO:   Default wait interval: 3000 ms
+INFO:   Default wait retries: 50
+INFO:   Leader only mode: False
+FFFFF                                                                    [100%]
+=================================== FAILURES ===================================
+_____________________________ test_review[ACCEPT] ______________________________
+
+direct_vm = VMContext(_sender=b'+\xd8\x06\xc9\x7f\x0e\x00\xaf\x1a\x1f\xc32\x8f\xa7c\xa9&\x97#\xc8', _origin=None, _contract_addres...m_mocks_hit=set(), _live_web_handler=None, _live_llm_handler=None, _gl_call_hook=None, _traces=[], _trace_enabled=True)
+direct_deploy = <function direct_deploy.<locals>._deploy at 0x7f842ba3da80>
+direct_alice = b'+\xd8\x06\xc9\x7f\x0e\x00\xaf\x1a\x1f\xc32\x8f\xa7c\xa9&\x97#\xc8'
+decision = 'ACCEPT'
+
+    @pytest.mark.parametrize('decision',['ACCEPT','REWORK','ESCALATE'])
+    def test_review(direct_vm,direct_deploy,direct_alice,decision):
+        direct_vm.sender=direct_alice
+>       contract=direct_deploy('contracts/delivery_review.py', sdk_version='v0.3.0-rc7')
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_contract.py:12: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+.venv/lib/python3.12/site-packages/gltest/direct/pytest_plugin.py:70: in _deploy
+    return deploy_contract(path, direct_vm, *args, sdk_version=sdk_version, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/gltest/direct/loader.py:80: in deploy_contract
+    contract_cls = load_contract_class(contract_path, vm, sdk_version)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/gltest/direct/loader.py:47: in load_contract_class
+    setup_sdk_paths(contract_path, sdk_version)
+.venv/lib/python3.12/site-packages/gltest/direct/sdk_loader.py:214: in setup_sdk_paths
+    tarball = download_artifacts(version)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/gltest/direct/sdk_loader.py:90: in download_artifacts
+    with urllib.request.urlopen(req, timeout=300) as resp:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/urllib/request.py:215: in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/urllib/request.py:521: in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/urllib/request.py:630: in http_response
+    response = self.parent.error(
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/urllib/request.py:559: in error
+    return self._call_chain(*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/urllib/request.py:492: in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <urllib.request.HTTPDefaultErrorHandler object at 0x7f842ba255e0>
+req = <urllib.request.Request object at 0x7f842bd17fb0>
+fp = <http.client.HTTPResponse object at 0x7f842c7b18a0>, code = 404
+msg = 'Not Found', hdrs = <http.client.HTTPMessage object at 0x7f842ba25b50>
+
+    def http_error_default(self, req, fp, code, msg, hdrs):
+>       raise HTTPError(req.full_url, code, msg, hdrs, fp)
+E       urllib.error.HTTPError: HTTP Error 404: Not Found
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/urllib/request.py:639: HTTPError
+----------------------------- Captured stdout call -----------------------------
+Downloading https://github.com/genlayerlabs/genvm/releases/download/v0.3.0-rc7/genvm-universal.tar.xz...
+_____________________________ test_review[REWORK] ______________________________
+
+direct_vm = VMContext(_sender=b'+\xd8\x06\xc9\x7f\x0e\x00\xaf\x1a\x1f\xc32\x8f\xa7c\xa9&\x97#\xc8', _origin=None, _contract_addres...m_mocks_hit=set(), _live_web_handler=None, _live_llm_handler=None, _gl_call_hook=None, _traces=[], _trace_enabled=True)
+direct_deploy = <function direct_deploy.<locals>._deploy at 0x7f842b963a60>
+direct_alice = b'+\xd8\x06\xc9\x7f\x0e\x00\xaf\x1a\x1f\xc32\x8f\xa7c\xa9&\x97#\xc8'
+decision = 'REWORK'
+
+    @pytest.mark.parametrize('decision',['ACCEPT','REWORK','ESCALATE'])
+    def test_review(direct_vm,direct_deploy,direct_alice,decision):
+        direct_vm.sender=direct_alice
+>       contract=direct_deploy('contracts/delivery_review.py', sdk_version='v0.3.0-rc7')
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_contract.py:12: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+.venv/lib/python3.12/site-packages/gltest/direct/pytest_plugin.py:70: in _deploy
+    return deploy_contract(path, direct_vm, *args, sdk_version=sdk_version, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/gltest/direct/loader.py:80: in deploy_contract
+    contract_cls = load_contract_class(contract_path, vm, sdk_version)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/gltest/direct/loader.py:47: in load_contract_class
+    setup_sdk_paths(contract_path, sdk_version)
+.venv/lib/python3.12/site-packages/gltest/direct/sdk_loader.py:214: in setup_sdk_paths
+    tarball = download_artifacts(version)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/gltest/direct/sdk_loader.py:90: in download_artifacts
+    with urllib.request.urlopen(req, timeout=300) as resp:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/urllib/request.py:215: in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/urllib/request.py:521: in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/urllib/request.py:630: in http_response
+    response = self.parent.error(
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/urllib/request.py:559: in error
+    return self._call_chain(*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/urllib/request.py:492: in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <urllib.request.HTTPDefaultErrorHandler object at 0x7f842ba255e0>
+req = <urllib.request.Request object at 0x7f842ba26ab0>
+fp = <http.client.HTTPResponse object at 0x7f842ba27460>, code = 404
+msg = 'Not Found', hdrs = <http.client.HTTPMessage object at 0x7f842ba272f0>
+
+    def http_error_default(self, req, fp, code, msg, hdrs):
+>       raise HTTPError(req.full_url, code, msg, hdrs, fp)
+E       urllib.error.HTTPError: HTTP Error 404: Not Found
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/urllib/request.py:639: HTTPError
+----------------------------- Captured stdout call -----------------------------
+Downloading https://github.com/genlayerlabs/genvm/releases/download/v0.3.0-rc7/genvm-universal.tar.xz...
+____________________________ test_review[ESCALATE] _____________________________
+
+direct_vm = VMContext(_sender=b'+\xd8\x06\xc9\x7f\x0e\x00\xaf\x1a\x1f\xc32\x8f\xa7c\xa9&\x97#\xc8', _origin=None, _contract_addres...m_mocks_hit=set(), _live_web_handler=None, _live_llm_handler=None, _gl_call_hook=None, _traces=[], _trace_enabled=True)
+direct_deploy = <function direct_deploy.<locals>._deploy at 0x7f842b90c720>
+direct_alice = b'+\xd8\x06\xc9\x7f\x0e\x00\xaf\x1a\x1f\xc32\x8f\xa7c\xa9&\x97#\xc8'
+decision = 'ESCALATE'
+
+    @pytest.mark.parametrize('decision',['ACCEPT','REWORK','ESCALATE'])
+    def test_review(direct_vm,direct_deploy,direct_alice,decision):
+        direct_vm.sender=direct_alice
+>       contract=direct_deploy('contracts/delivery_review.py', sdk_version='v0.3.0-rc7')
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_contract.py:12: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+.venv/lib/python3.12/site-packages/gltest/direct/pytest_plugin.py:70: in _deploy
+    return deploy_contract(path, direct_vm, *args, sdk_version=sdk_version, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/gltest/direct/loader.py:80: in deploy_contract
+    contract_cls = load_contract_class(contract_path, vm, sdk_version)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/gltest/direct/loader.py:47: in load_contract_class
+    setup_sdk_paths(contract_path, sdk_version)
+.venv/lib/python3.12/site-packages/gltest/direct/sdk_loader.py:214: in setup_sdk_paths
+    tarball = download_artifacts(version)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/gltest/direct/sdk_loader.py:90: in download_artifacts
+    with urllib.request.urlopen(req, timeout=300) as resp:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/urllib/request.py:215: in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/urllib/request.py:521: in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/urllib/request.py:630: in http_response
+    response = self.parent.error(
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/urllib/request.py:559: in error
+    return self._call_chain(*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/urllib/request.py:492: in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <urllib.request.HTTPDefaultErrorHandler object at 0x7f842ba255e0>
+req = <urllib.request.Request object at 0x7f842ba2dee0>
+fp = <http.client.HTTPResponse object at 0x7f842ba2f4c0>, code = 404
+msg = 'Not Found', hdrs = <http.client.HTTPMessage object at 0x7f842ba2de80>
+
+    def http_error_default(self, req, fp, code, msg, hdrs):
+>       raise HTTPError(req.full_url, code, msg, hdrs, fp)
+E       urllib.error.HTTPError: HTTP Error 404: Not Found
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/urllib/request.py:639: HTTPError
+----------------------------- Captured stdout call -----------------------------
+Downloading https://github.com/genlayerlabs/genvm/releases/download/v0.3.0-rc7/genvm-universal.tar.xz...
+____________________________ test_owner_and_missing ____________________________
+
+direct_vm = VMContext(_sender=b'+\xd8\x06\xc9\x7f\x0e\x00\xaf\x1a\x1f\xc32\x8f\xa7c\xa9&\x97#\xc8', _origin=None, _contract_addres...m_mocks_hit=set(), _live_web_handler=None, _live_llm_handler=None, _gl_call_hook=None, _traces=[], _trace_enabled=True)
+direct_deploy = <function direct_deploy.<locals>._deploy at 0x7f842b90c7c0>
+direct_alice = b'+\xd8\x06\xc9\x7f\x0e\x00\xaf\x1a\x1f\xc32\x8f\xa7c\xa9&\x97#\xc8'
+direct_bob = b'\x81\xb67\xd8\xfc\xd2\xc6\xdacY\xe6\x961\x13\xa1\x17\r\xe7\x95\xe4'
+
+    def test_owner_and_missing(direct_vm,direct_deploy,direct_alice,direct_bob):
+        direct_vm.sender=direct_alice
+>       contract=direct_deploy('contracts/delivery_review.py', sdk_version='v0.3.0-rc7')
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_contract.py:21: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+.venv/lib/python3.12/site-packages/gltest/direct/pytest_plugin.py:70: in _deploy
+    return deploy_contract(path, direct_vm, *args, sdk_version=sdk_version, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/gltest/direct/loader.py:80: in deploy_contract
+    contract_cls = load_contract_class(contract_path, vm, sdk_version)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/gltest/direct/loader.py:47: in load_contract_class
+    setup_sdk_paths(contract_path, sdk_version)
+.venv/lib/python3.12/site-packages/gltest/direct/sdk_loader.py:214: in setup_sdk_paths
+    tarball = download_artifacts(version)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/gltest/direct/sdk_loader.py:90: in download_artifacts
+    with urllib.request.urlopen(req, timeout=300) as resp:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/urllib/request.py:215: in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/urllib/request.py:521: in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/urllib/request.py:630: in http_response
+    response = self.parent.error(
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/urllib/request.py:559: in error
+    return self._call_chain(*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/urllib/request.py:492: in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <urllib.request.HTTPDefaultErrorHandler object at 0x7f842ba255e0>
+req = <urllib.request.Request object at 0x7f842ba2d310>
+fp = <http.client.HTTPResponse object at 0x7f842ba26a70>, code = 404
+msg = 'Not Found', hdrs = <http.client.HTTPMessage object at 0x7f842ba2d250>
+
+    def http_error_default(self, req, fp, code, msg, hdrs):
+>       raise HTTPError(req.full_url, code, msg, hdrs, fp)
+E       urllib.error.HTTPError: HTTP Error 404: Not Found
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/urllib/request.py:639: HTTPError
+----------------------------- Captured stdout call -----------------------------
+Downloading https://github.com/genlayerlabs/genvm/releases/download/v0.3.0-rc7/genvm-universal.tar.xz...
+_______________________________ test_invalid_llm _______________________________
+
+direct_vm = VMContext(_sender=b'+\xd8\x06\xc9\x7f\x0e\x00\xaf\x1a\x1f\xc32\x8f\xa7c\xa9&\x97#\xc8', _origin=None, _contract_addres...m_mocks_hit=set(), _live_web_handler=None, _live_llm_handler=None, _gl_call_hook=None, _traces=[], _trace_enabled=True)
+direct_deploy = <function direct_deploy.<locals>._deploy at 0x7f842b90c360>
+direct_alice = b'+\xd8\x06\xc9\x7f\x0e\x00\xaf\x1a\x1f\xc32\x8f\xa7c\xa9&\x97#\xc8'
+
+    def test_invalid_llm(direct_vm,direct_deploy,direct_alice):
+        direct_vm.sender=direct_alice
+>       contract=direct_deploy('contracts/delivery_review.py', sdk_version='v0.3.0-rc7')
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_contract.py:33: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+.venv/lib/python3.12/site-packages/gltest/direct/pytest_plugin.py:70: in _deploy
+    return deploy_contract(path, direct_vm, *args, sdk_version=sdk_version, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/gltest/direct/loader.py:80: in deploy_contract
+    contract_cls = load_contract_class(contract_path, vm, sdk_version)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/gltest/direct/loader.py:47: in load_contract_class
+    setup_sdk_paths(contract_path, sdk_version)
+.venv/lib/python3.12/site-packages/gltest/direct/sdk_loader.py:214: in setup_sdk_paths
+    tarball = download_artifacts(version)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/gltest/direct/sdk_loader.py:90: in download_artifacts
+    with urllib.request.urlopen(req, timeout=300) as resp:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/urllib/request.py:215: in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/urllib/request.py:521: in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/urllib/request.py:630: in http_response
+    response = self.parent.error(
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/urllib/request.py:559: in error
+    return self._call_chain(*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/urllib/request.py:492: in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <urllib.request.HTTPDefaultErrorHandler object at 0x7f842ba255e0>
+req = <urllib.request.Request object at 0x7f842ba27950>
+fp = <http.client.HTTPResponse object at 0x7f842ba27a90>, code = 404
+msg = 'Not Found', hdrs = <http.client.HTTPMessage object at 0x7f842ba2e180>
+
+    def http_error_default(self, req, fp, code, msg, hdrs):
+>       raise HTTPError(req.full_url, code, msg, hdrs, fp)
+E       urllib.error.HTTPError: HTTP Error 404: Not Found
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/urllib/request.py:639: HTTPError
+----------------------------- Captured stdout call -----------------------------
+Downloading https://github.com/genlayerlabs/genvm/releases/download/v0.3.0-rc7/genvm-universal.tar.xz...
+=========================== short test summary info ============================
+FAILED tests/test_contract.py::test_review[ACCEPT] - urllib.error.HTTPError: ...
+FAILED tests/test_contract.py::test_review[REWORK] - urllib.error.HTTPError: ...
+FAILED tests/test_contract.py::test_review[ESCALATE] - urllib.error.HTTPError...
+FAILED tests/test_contract.py::test_owner_and_missing - urllib.error.HTTPErro...
+FAILED tests/test_contract.py::test_invalid_llm - urllib.error.HTTPError: HTT...
+5 failed in 25.88s

@@ -6,8 +6,8 @@
   "checkedAt": "2026-11-13T00:10:49.826Z",
   "_evidenceMetadata": {
     "status": "superseded-historical",
-    "artifactRevision": "pre-signed-sandbox",
+    "artifactRevision": "prior-release",
     "currentIndex": "evidence/EVIDENCE_INDEX.json",
-    "note": "Pre-signed-sandbox evidence. Retained for provenance; not current UI/video/test status."
+    "note": "Prior-release evidence retained for provenance; not current UI/video/test status."
   }
 }

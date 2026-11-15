@@ -226,6 +226,7 @@ export function validateReceipt(
     c.data.client !== client ||
     c.data.mandateHash !== hash(mandate) ||
     c.data.terms !== terms ||
+    c.data.resource !== "sandbox://consensus-explainer" ||
     !authentic(a, client) ||
     a.data.challengeHash !== hash(c) ||
     a.data.nonce !== c.data.nonce ||
@@ -311,6 +312,7 @@ export class ControlledClient {
             c.data.client !== this.keys.publicKey ||
             c.data.mandateHash !== hash(mandate) ||
             c.data.terms !== terms ||
+            c.data.resource !== "sandbox://consensus-explainer" ||
             r.amount !== "1" ||
             r.asset !== "NO-MONEY" ||
             r.payTo !== hash(provider)
@@ -357,6 +359,8 @@ export class ControlledClient {
       if (second.status !== 200) throw Error("Delivery rejected");
       const receipt = (await second.json()) as Signed<Receipt>;
       validateReceipt(receipt, provider, this.keys.publicKey);
+      if (hash(receipt.data.authorization) !== hash(payload.payload))
+        throw Error("Delivery is not bound to this request authorization");
       this.receipt = receipt;
       this.evidence = reviewEvidence(receipt);
       this.events.push("200 → provider signature verified → HOLD for Court");
