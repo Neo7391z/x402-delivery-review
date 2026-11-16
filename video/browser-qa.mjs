@@ -16,6 +16,7 @@ const errors = [];
 page.on("pageerror", (e) => errors.push(String(e)));
 try {
   await page.goto("http://127.0.0.1:4173");
+  await page.locator("#legacy").evaluate((e) => (e.open = true));
   await page
     .locator(".brands img")
     .evaluateAll((xs) => Promise.all(xs.map((x) => x.decode())));

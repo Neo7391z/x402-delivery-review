@@ -1,3 +1,5 @@
+> Historical mission-101 analysis. The current v6 target is ordinary Projects (type 41), not another mission submission. See PROJECTS_FIT.md.
+
 # Mission 101 fit — checked 2026-11-15
 
 Source: https://portal-admin.genlayer.foundation/api/v1/missions/101/ (public API snapshot in `evidence/mission-101-2026-11-15.json`). Active through 2026-11-22 23:59 UTC. Acceptance is a reviewer decision, not guaranteed by these checks.

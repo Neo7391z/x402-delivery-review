@@ -13,4 +13,4 @@ INFO:   Default wait interval: 3000 ms
 INFO:   Default wait retries: 50
 INFO:   Leader only mode: False
 .....                                                                    [100%]
-5 passed in 19.78s
+5 passed in 20.21s

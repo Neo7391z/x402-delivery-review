@@ -1,9 +1,7 @@
-# Live signed delivery results
+# Current live UI evidence: v6
 
-See README and evidence/signed-{sandbox,rework,accept}-verified.json for the current results. All three signed deliveries use actual localhost HTTP and official x402 core. Two finalized reviews verified successfully (REWORK/PAUSE and ACCEPT/ALLOW). The first signed case had a dissenting validator; it deliberately remains HOLD despite Studio majority finality.
+See `evidence/v6/browser-live-qa.json`, `browser-live-job.json` and `run/`. The actual browser opt-in created a new deployment and exact signed-evidence review; verified FINALIZED REWORK/PAUSE blocked the next fetch (provider count 2→2). No historical result was substituted.
 
-The original unsigned case remains historical evidence only. Deployed source is unchanged. Public review source and calldata can be rechecked without signing. The recorded UI is an observer controller using a public key, so it cannot create a new client signature. Private operator/client keys are excluded from artifacts.
+`browser-recovery-qa.json` separately records an actual backend restart and read-only same-transaction recheck, explicitly without replaying the controller effect. `browser-offline-qa.json` is a mocked network-failure UI test, not a live chain claim. v3/v5 proofs remain historical. The contract source is unchanged; source, owner/operator, calldata/evidence, finality and final state remain verified.
 
-Browser QA is now passed; old environment-blocker notes and the old video/render.mjs script are superseded by video/browser-qa.mjs. See COURT_WORKFLOW.md for the precise scope and manual appeal path.
-
-Latest v5: see FRESH_RUN.md and MISSION_FIT.md. Fresh reviewers can create their own disposable signer/deployment and complete the same-delivery review/effect flow; the public baseline remains available.
+No v6 repository push, public interactive hosting or portal submission is claimed. See PROJECTS_FIT.md and PUBLIC_UPDATE.md.

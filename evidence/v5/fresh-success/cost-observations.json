@@ -14,5 +14,11 @@
   "balanceAfter": "0x0",
   "submittedValue": "0",
   "submittedGasPrice": "0",
-  "scope": "Hosted Studionet only; no user wallet or real funds"
+  "scope": "Hosted Studionet only; no user wallet or real funds",
+  "_evidenceMetadata": {
+    "status": "superseded-historical",
+    "artifactRevision": "prior-release",
+    "currentIndex": "evidence/EVIDENCE_INDEX.json",
+    "note": "Prior-release evidence retained for provenance; not current UI/video/test status."
+  }
 }

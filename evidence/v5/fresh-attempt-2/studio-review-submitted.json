@@ -17,5 +17,11 @@
   "rotations": 3,
   "status": "SUBMITTED",
   "createdAt": "2026-11-15T10:14:28.768Z",
-  "transactionHash": "0x3d01c8610d938c68613da826437ce811afe6af69bb735ba4ac6f776415791bbd"
+  "transactionHash": "0x3d01c8610d938c68613da826437ce811afe6af69bb735ba4ac6f776415791bbd",
+  "_evidenceMetadata": {
+    "status": "superseded-historical",
+    "artifactRevision": "prior-release",
+    "currentIndex": "evidence/EVIDENCE_INDEX.json",
+    "note": "Prior-release evidence retained for provenance; not current UI/video/test status."
+  }
 }

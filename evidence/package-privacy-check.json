@@ -1,7 +1,7 @@
 {
   "passed": true,
   "excludedPrivateDirectory": ".local",
-  "checkedFiles": 168,
+  "checkedFiles": 210,
   "checkedPrivateMaterial": true,
   "publicSignaturesIntentionallyIncluded": true
 }

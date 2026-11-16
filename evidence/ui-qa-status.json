@@ -1,10 +1,11 @@
 {
   "status": "current",
-  "release": "v5-fresh-reproduction",
+  "release": "v6-browser-projects",
   "passed": true,
   "reports": [
-    "evidence/ui-qa-sandbox.json",
-    "evidence/ui-qa-recorded.json"
+    "evidence/v6/browser-live-qa.json",
+    "evidence/v6/browser-recovery-qa.json",
+    "evidence/v6/browser-offline-qa.json"
   ],
   "supersedes": "evidence/history/pre-signed-sandbox/ui-qa-status.json"
 }

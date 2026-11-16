@@ -1,0 +1,20 @@
+{
+  "mode": "deploy",
+  "rpc": "https://studio.genlayer.com/api",
+  "chain": "0xf22f",
+  "network": "61999",
+  "gasPrice": "0",
+  "operator": "0x7F30d532CA6081aD3DA6cF9D9EB399C1DE8C2df7",
+  "recipient": "0x0000000000000000000000000000000000000000",
+  "consensusTarget": "0xb7278A61aa25c888815aFC32Ad3cC52fF24fE575",
+  "value": "0",
+  "gasLimit": "0x7a120",
+  "nonce": "0x0",
+  "balanceBefore": "0x0",
+  "sourceSha256": "c7acf29cd223bf3235bebf8e5434b87e6e44940d8d4a3c3c20f073a8970f747d",
+  "leaderOnly": false,
+  "validators": 5,
+  "rotations": 3,
+  "status": "PREPARED",
+  "createdAt": "2026-11-16T08:37:58.097Z"
+}

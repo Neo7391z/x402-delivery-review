@@ -9,8 +9,8 @@
     "start": "node --import tsx src/server.ts",
     "probe": "node --import tsx src/probe.ts",
     "verify:live": "node --import tsx src/live-cli.ts",
-    "format": "prettier --write \"src/**/*.ts\" \"tests/**/*.ts\" \"video/*.mjs\" package.json tsconfig.json",
-    "format:check": "prettier --check \"src/**/*.ts\" \"tests/**/*.ts\" \"video/*.mjs\" package.json tsconfig.json",
+    "format": "prettier --write \"src/**/*.ts\" \"tests/**/*.ts\" \"video/*.mjs\" \"public/*.js\" package.json tsconfig.json",
+    "format:check": "prettier --check \"src/**/*.ts\" \"tests/**/*.ts\" \"video/*.mjs\" \"public/*.js\" package.json tsconfig.json",
     "demo:fresh": "node --import tsx src/fresh-demo.ts"
   },
   "keywords": [],

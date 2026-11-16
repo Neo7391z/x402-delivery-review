@@ -4,22 +4,23 @@
   "streams": [
     {
       "width": 1280,
-      "height": 1000,
-      "r_frame_rate": "24/1"
+      "height": 1050,
+      "r_frame_rate": "24/1",
+      "nb_frames": "960"
     }
   ],
   "format": {
     "duration": "40.000000"
   },
-  "decodePassed": true,
-  "visualInspection": "Opening, contact sheet, UI desktop/mobile screenshots checked; no clipping observed",
-  "footage": "Actual browser captures, edited timing; new HTTP and historical reviewed cases explicitly distinguished",
-  "aiProcessing": "AI-generated background with compositing and captioned screen-recording edit",
-  "noPayment": true,
-  "release": "v5-fresh-reproduction",
-  "artifactRevision": "v3-browser-workflow",
+  "release": "v6-browser-projects",
+  "artifactRevision": "v6-browser-fresh-lifecycle",
   "artifact": "video/delivery-review-demo.mp4",
-  "artifactSha256": "a55ad55dd4572aebdf9543fe47c3a835af3586780641414b928d1d9a184b4a11",
+  "artifactSha256": "fc79f7cc14120f91c424b20138a3323ca1bb1e3df52a50a9b01f0443f934a53c",
   "status": "current",
-  "supersedes": "evidence/history/pre-signed-sandbox/video-qa.json"
+  "supersedes": "evidence/history/v5-ui-readonly/video-qa.json",
+  "decodePassed": true,
+  "source": "Actual browser fresh lifecycle ui-da3e83f0-8aba-4e8f-858e-3ee4c50f13a9",
+  "editing": "Waiting periods cut; some clips retimed; no synthetic UI/result",
+  "AIProcessing": "AI-generated title/end background, motion, compositing and captions",
+  "noPayment": true
 }

@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "mode": "Mocked browser network-failure test; no transaction",
+  "scenarioRetained": true,
+  "requestIdRetained": true,
+  "noAutoSubmissionOnReload": true,
+  "consentNotSilentlyRestored": true
+}

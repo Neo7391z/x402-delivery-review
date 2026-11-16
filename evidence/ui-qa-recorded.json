@@ -5,6 +5,12 @@
   "errors": [],
   "imagesLoaded": true,
   "mobileOverflow": false,
-  "before": "Recorded: GET → 402 → authorization → signed delivery\nCourt REWORK → PAUSE\nProvider requests this session: 0 / deliveries: 0",
-  "after": "Recorded: GET → 402 → authorization → signed delivery\nCourt REWORK → PAUSE\nBLOCKED before fetch: PAUSE\nProvider requests this session: 0 / deliveries: 0"
+  "before": "Recorded: GET \u2192 402 \u2192 authorization \u2192 signed delivery\nCourt REWORK \u2192 PAUSE\nProvider requests this session: 0 / deliveries: 0",
+  "after": "Recorded: GET \u2192 402 \u2192 authorization \u2192 signed delivery\nCourt REWORK \u2192 PAUSE\nBLOCKED before fetch: PAUSE\nProvider requests this session: 0 / deliveries: 0",
+  "_evidenceMetadata": {
+    "status": "superseded-historical",
+    "artifactRevision": "prior-release",
+    "currentIndex": "evidence/EVIDENCE_INDEX.json",
+    "note": "Prior-release evidence retained for provenance; not current UI/video/test status."
+  }
 }

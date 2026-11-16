@@ -1,91 +1,72 @@
-# Delivery Review — signed x402 sandbox
+# Delivery Review — browser-driven GenLayer supervision
 
-Internet Court Partner Demo Lab · Neo7391z · GenLayer profile Max Mara.
+Neo7391z / Max Mara · ordinary GenLayer Projects (type 41).
 
-A working local agent controller: HTTP 402 → official x402 client authorization → signed provider delivery → GenLayer semantic review → allow or block the next request. **Custom non-monetary sandbox scheme; no ERC-20 payment or production merchant integration.** GenLayer executes on the public hosted Studionet simulator, not mainnet.
+A browser-driven app for a concrete trust problem: an API can deliver an answer that contradicts its promise. The local client binds the offer, authorization and supplier-signed response, submits the exact evidence to a real GenLayer Intelligent Contract, then allows or blocks the next request according to the finalized judgment.
 
-## Fresh reproduction (release v5)
+**Custom non-monetary x402 sandbox. Zero-fee hosted Studionet. Trusted local backend/controller and RPC. No real payment, Court jury, refund or wallet-wide revocation.**
 
-Use Node.js 22+ (validated on Node 24). No old author key, controller file or deployed address is needed:
-
-```sh
-npm ci
-npm run demo:fresh
-# Plan only above; the explicit command below deploys public synthetic test data:
-npm run demo:fresh -- --authorized-studionet-only --scenario=bad
-```
-
-The fresh run checks both network identifiers and zero gas price, creates an isolated disposable signer, deploys the pinned contract, verifies successful finalized deployment/source/owner, performs a real signed HTTP delivery, submits that exact evidence, verifies the finalized GenLayer decision and attempts the next request through the same controller. `--scenario=good` exercises continuation instead. No money, wallet import or production signature is requested. Runs are retained under `.local/fresh-runs/<run-id>/`; only their sanitized public evidence may be shared. See [FRESH_RUN.md](FRESH_RUN.md) for outcomes, timing and failure recovery.
-
-The existing UI remains a no-signing option: a fresh HTTP delivery ends in HOLD, while the recorded-case button performs fresh read-only RPC verification. Neither is silently substituted for the full fresh CLI run. See [MISSION_FIT.md](MISSION_FIT.md) for requirement-by-requirement scope and eligibility.
-
-## Evidence versioning (v4 baseline)
-
-The v4 baseline corrected metadata and formatted TypeScript; the v3 browser-workflow video and deployed contract are unchanged. Browser QA screenshots were refreshed. Current video: **40 seconds, 1280×1000, actual browser captures**. All three current video reports bind to the same SHA-256. See [evidence/README.md](evidence/README.md) and [EVIDENCE_INDEX.json](evidence/EVIDENCE_INDEX.json) before interpreting older receipts/logs; historical reports are explicitly superseded.
-
-## Fresh v5 result (2026-11-15)
-
-A complete fresh run finished with **FINALIZED REWORK → PAUSE**, and the attempted next request left the real provider counter **2 → 2**. New contract: `0x12daD2fB0C1e4469E0Bd99AfA6721c403cc52c95`; review: `0xdb604b2cba0d9f5b5d13b59bdf4c6ebc5a7a3724391679d3a04285d807351890`. See `evidence/v5/fresh-success/` for the exact signed packet, deployment and full result. Two earlier attempts exposed a read timeout and a leader self-validation cancellation compatibility issue; their original HOLD results are retained in `evidence/v5/fresh-attempt-*/`. They are not counted as original successful end-to-end runs.
-
-## Verified results
-
-Contract `0x7e4b6EdbEC697a28Fce4F1D6a7e30Ed47B8164E6`, chain 61999. Source SHA-256 `c7acf29cd223bf3235bebf8e5434b87e6e44940d8d4a3c3c20f073a8970f747d`.
-
-| Signed case | Transaction | Verified effect |
-|---|---|---|
-| Deficient delivery | `0xde31d898fe9d24374073b69ad3f8a70287d4428d6a0aa2a8ad700c81c75ca5e5` | FINALIZED REWORK → PAUSE; next fetch blocked |
-| Correct delivery | `0x6d8abf7999553ea192da9fe2d08faeeb066b57ff55c7522c8c0ac8e5587075dd` | FINALIZED ACCEPT → ALLOW; next delivery completed, then HOLD for its review |
-| Validator dissent | `0x8338eecf0300dacf2590679d675fe1a3860ac626ade503e82874c6d0d71f7c37` | Studio finalized by majority; stricter client rejected dissent and retained HOLD |
-
-Public receipts, signed evidence and local effect logs are in `evidence/signed-*-*.json`. Initial unsigned synthetic review is retained as historical evidence, not substituted for signed cases. No user wallet or real funds used; observed gas price and value zero.
-
-## Run
+## Use the actual UI
 
 ```sh
 npm ci
 npm run build
-npm test
 npm start
 ```
 
-Open http://127.0.0.1:4173. **Run real HTTP sandbox** performs actual 402/authorization/200 with signed evidence. **Attempt next request** is blocked until that exact evidence gets a verified review. Server counters prove no fetch occurred. Alternatively, in a fresh server session, **Verify signed Studio case** validates the public signed receipt and freshly queries the finalized deficient case; no private key needed. Then attempt a request to observe PAUSE. These are separate demo mandates; the UI will not replace an active mandate.
+Use Node 22+ (validated on Node 24). Open **http://127.0.0.1:4173**.
 
-Read-only public reproduction:
+1. Choose the deficient or complete answer scenario.
+2. Read and explicitly check the consent box. Nothing creates a demo signer or submits synthetic on-chain data before this opt-in.
+3. Click **Deploy & review fresh delivery**. The browser starts a new backend job: free-network check → new disposable signer → deployment → finalized source/owner check → actual HTTP 402/authorization/signed delivery → `review(evidence)` transaction → final read-back → next-request attempt.
+4. Follow the live stage list and new contract/deployment/review hashes. Reloading observes the same durable job rather than submitting again.
+5. Expected deficient case: **FINALIZED REWORK → PAUSE**, provider request counter **2 → 2**, next fetch blocked. Complete answers may be ACCEPT/ALLOW: a second delivery occurs, then HOLD pending its review. Models/service availability are not guaranteed; disagreement or invalid proof remains HOLD.
+
+The browser now genuinely creates a fresh deployment and calls its contract through a same-origin local API. It does not merely launch a CLI or load an unrelated historical receipt. Browser and CLI share the typed `src/fresh-flow.ts` orchestration service. Signing stays in the local backend; private material is never returned to the browser.
+
+## Verified browser run
+
+On 2026-11-16 the actual browser opt-in created job `da3e83f0-8aba-4e8f-858e-3ee4c50f13a9`:
+
+- Contract: `0xaE71448aa013374735eF738Ec650B6b3229d405A`
+- Deploy: `0x8750a170de6068a9b1933369451eef4200114341b291169386ac098d9b212a84`
+- Review: `0x3d60bae258389bb8015cb3fd37ab796fee2e51a39797956e7bdbb72613302728`
+- Result: verified FINALIZED REWORK → PAUSE; request count 2 → 2.
+
+`evidence/v6/browser-live-qa.json` and `evidence/v6/run/` contain the actual UI observations and signed packet. The same-job duplicate POST and page reload were tested during the live run. A later server restart/read-only recheck is recorded separately; it never replays the controller action. The current [40-second video](video/delivery-review-demo.mp4) shows this actual browser lifecycle, with waiting periods explicitly edited. Earlier video and CLI proofs are labeled historical.
+
+## Failure and recovery
+
+See [UI_LIFECYCLE.md](UI_LIFECYCLE.md). Duplicate clicks reuse one UUID; different simultaneous launches are rejected. API requests require a localhost Host, same-origin checks, a session CSRF token, bounded JSON and explicit consent. No caller can choose an arbitrary RPC, signer, contract or transaction for a new job. A server interruption yields INTERRUPTED; the recheck action reads the exact saved transaction and reports whether it verified, without creating a key, sending a transaction or claiming the old controller effect was replayed. A new run always requires new explicit consent.
+
+## Verification and source
 
 ```sh
-npm run verify:live -- 0x7e4b6EdbEC697a28Fce4F1D6a7e30Ed47B8164E6 0x0898cA82CDA5C0008383706230A7b6fF0b0c2618 0xde31d898fe9d24374073b69ad3f8a70287d4428d6a0aa2a8ad700c81c75ca5e5 evidence/signed-rework-packet.json
+npm test
+npm run format:check
 ```
 
-`COURT_WORKFLOW.md` specifies mandate, rubric, signed schema, decision mapping, executable local effect path, failures and manual appeal. `src/sandbox.ts` implements the protocol and controller. `src/verify.ts` and `studio-consensus.ts` verify exact network, source, owner/operator, finalized calldata and decision. `src/studio-submit.ts` is an explicit opt-in CLI with zero-price/network guards and persistent duplicate protection; the web server has no transaction-signing endpoint. Private disposable keys and controller files under `.local/` are excluded from distribution.
+80 Node tests cover protocol signatures, current-request binding, network/finality/consensus checks, wrong evidence/source/operator, duplicate/concurrent jobs, storage failure, interruption and API consent/origin/CSRF guards. Strict build and formatting pass. Five direct GenVM tests and official lint validate the unchanged contract; LLM outputs in direct tests are mocked. The browser run above uses real hosted execution.
 
-## Validation
-
-66 Node tests passed, including actual HTTP transport, signatures, tampering, replay, concurrent request blocking, restart state, storage failure, wrong relayer/operator, RPC outage and decision binding. Strict TypeScript build and pinned Prettier formatting check passed. Run `npm run format:check` to reproduce the formatting check. Five direct GenVM tests and official lint passed for the unchanged deployed source; VM LLM outputs are mocked, while the signed hosted cases above and the fresh-run evidence are real semantic executions.
-
-Browser QA passed in isolated official Chrome headless shell 157: both fresh sandbox and public recorded-case/fresh-RPC flows; logos loaded; no JavaScript errors; no horizontal overflow at 390px. See `evidence/ui-qa-sandbox.json` and `ui-qa-recorded.json`, plus desktop/mobile PNGs. `video/browser-qa.mjs` and `record-workflow.mjs` reproduce checks/captures (set CHROME_PATH for your headless browser).
-
-Python checks:
+The CLI remains available as `npm run demo:fresh` (plan only) or explicit `--authorized-studionet-only`; it is an alternative, not the browser's implementation. See FRESH_RUN.md. Optional contract checks:
 
 ```sh
 python -m venv .venv
 .venv/bin/pip install -r requirements.lock.txt
 .venv/bin/genvm-lint check contracts/delivery_review.py --json
+mkdir -p ~/.cache/gltest-direct
+cp ~/.cache/genvm-linter/genvm-universal-v0.3.0-rc7.tar.xz ~/.cache/gltest-direct/genvm-universal-v0.3.0-rc7.tar.xz
 .venv/bin/pytest tests/test_contract.py -q
 ```
 
-Known tooling issue: genlayer-test 0.29.2 requests the renamed v0.3.0-rc7 `genvm-universal.tar.xz` asset and gets 404. The official linter supports its replacement. After lint downloads it, use the identical cached release:
+The cache copy works around genlayer-test 0.29.2 requesting the renamed old release asset; it reuses the same official runner downloaded by the linter.
 
-```sh
-mkdir -p ~/.cache/gltest-direct
-cp ~/.cache/genvm-linter/genvm-universal-v0.3.0-rc7.tar.xz ~/.cache/gltest-direct/genvm-universal-v0.3.0-rc7.tar.xz
-```
+## Hosting and submission scope
 
-## Scope
+**The v6 interactive app is localhost-only; it is not publicly hosted.** The server binds 127.0.0.1 and rejects public Host/Origin values. Do not expose it through an unauthenticated proxy: it controls disposable signing keys and a shared local job store. A public interactive deployment needs a separate authenticated, quota-limited, per-user-isolated backend (or a separately designed browser-wallet architecture). This package does not claim that a static video/read-only showcase satisfies the Projects website field.
 
-Supplier signatures prove possession of the demo key, not independent vendor identity. The client verifies signatures; the contract reviews the complete evidence semantically but does not cryptographically verify Ed25519. The local host/controller and Studio RPC are trusted. API sessions are in memory; the CLI persists controller state atomically. This is not wallet-wide revocation, a refund engine, a jury case, or an ERC-7710 bridge. `warn` and permanent `revoke` are outside this prototype. Prompt-injection robustness is not comprehensively proven. Hosted Studio may reset; fresh verification then fails closed.
+Public baseline `e7fc02ca6bfde8634dbde57da4bc9f626227f747` was verified; v5 implementation was published in `96c43c7b52d9132f3da8d757a23fa2e43e936062`. This source tree contains the v6 browser lifecycle, tests, video and public evidence. See PROJECTS_FIT.md. No portal form has been submitted. Ordinary Projects is the target; mission-101 builder-wg eligibility is not imposed on it.
 
-Public repository and video availability were verified on 2026-11-15 at commit `1631ce77e4ce329156c97224707ad7b2fb5c1bdd`. This v5 source tree adds fresh reproduction and authorization-binding safeguards. The mission requires the `builder-wg` Discord role; personal eligibility must be confirmed in the portal. Mission submission is not performed by this update. Reward and acceptance are not guaranteed.
+## Public project website
 
-## Download
-
-Source, tests and evidence are browsable in this repository. Clone it and follow the Run instructions above. The original complete review snapshot is also available in [published baseline snapshot](https://github.com/Neo7391z/x402-delivery-review/blob/1631ce77e4ce329156c97224707ad7b2fb5c1bdd/delivery-review-source.zip). Watch the [40-second demo](video/delivery-review-demo.mp4). Private signing material, account handoff notes, dependencies and build caches are excluded.
+[Delivery Review showcase](https://delivery-review-neo7391z.compassionateibex.chatgpt.site) hosts the recorded v6 browser demo, verification evidence and reproduction instructions. It is a read-only project website, not a hosted transaction-signing service. Run the interactive application locally using the instructions above.

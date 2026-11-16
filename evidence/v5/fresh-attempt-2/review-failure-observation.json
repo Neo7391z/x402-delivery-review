@@ -36,5 +36,11 @@
     "0xCCE41534BAa355c2C268Ebd9EFE4a9D395cd659B": "agree",
     "0xE826F4232546894b7F1C6939309f22334de6d68a": "agree",
     "0xeA908540c5FBB68Da844cC1BE5eaC8b23391e908": "idle"
+  },
+  "_evidenceMetadata": {
+    "status": "superseded-historical",
+    "artifactRevision": "prior-release",
+    "currentIndex": "evidence/EVIDENCE_INDEX.json",
+    "note": "Prior-release evidence retained for provenance; not current UI/video/test status."
   }
 }

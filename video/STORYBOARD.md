@@ -1,10 +1,7 @@
-# Actual workflow screen recording — 40 seconds
+# v6 actual browser contract lifecycle — 40 seconds
 
-0–4 s: AI-generated background with official Internet Court / GenLayer / x402 logos; scope.
-4–20 s: Actual fresh localhost browser interaction: 402 → official client authorization → provider-signed delivery → HOLD; retry is blocked and request count remains two.
-20–36 s: Actual browser interaction loading a historical signed delivery and performing a **fresh RPC verification** of its FINALIZED GenLayer review; REWORK → PAUSE; next request blocked before fetch, provider receives zero new requests.
-36–40 s: Results summary, including separately evidenced real ACCEPT continuation and dissent/HOLD case.
+The current cut uses the real browser recording of UI job da3e83f0-8aba-4e8f-858e-3ee4c50f13a9. It shows explicit consent, new deployment, fresh signed delivery, review submission, final verification and REWORK/PAUSE with provider count 2 → 2. Waiting periods from the approximately 147-second capture are cut and some clips retimed, explicitly labeled. No historical transaction is substituted for the new run.
 
-Captures are edited for timing (raw lengths approximately 22 and 29 seconds). The remote submission/wait period is not filmed or represented as instantaneous. The fresh HTTP delivery and recorded reviewed delivery are explicitly different cases. No fabricated UI, mock verdict, payment or jury claim. Silent captions; 1280×1000, 24 fps, H.264. AI-generated background, compositing, timing and captions provide the AI-assisted edit.
+3-second AI-assisted title, 34 seconds of edited actual browser stages, 3-second result card. Official Internet Court, GenLayer and x402 logos; AI-generated composited background, motion and captions. 1280×1050, 24 fps, silent H.264; full decode checked. Renderer: `.venv/bin/python video/edit_ui_lifecycle.py`. Raw recording: `video/v6-browser-lifecycle.webm`.
 
-Reproduce: `UI_MODE=sandbox node --import tsx video/record-workflow.mjs`, then `UI_MODE=recorded ...`; set CHROME_PATH to an installed headless shell. Each runs a separate server session. `.venv/bin/python video/edit_workflow.py` composes final MP4. See `evidence/video-workflow-qa.json` and `workflow-contact-sheet.png`. The older card-only renderer is retained as history and does not generate the current cut.
+Earlier v3/v5 video is preserved under `video/history/v3-browser-readonly-demo.mp4` and is not the current video. It showed a fresh HTTP sandbox plus a separate historical read-only case; the new cut shows an actual fresh browser-driven contract lifecycle instead.

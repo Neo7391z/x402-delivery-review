@@ -30,5 +30,11 @@
       "issuedAt": "2026-11-15T10:19:05.316Z"
     },
     "signature": "7BYfiofp6tKdPBQZnR30Vo6ZcLzfMPORP3QoIKguI3KkzTS8LptW5VxUSnh7wlhqKmnCll9Bg0Wes4JjaCkWDA=="
+  },
+  "_evidenceMetadata": {
+    "status": "superseded-historical",
+    "artifactRevision": "prior-release",
+    "currentIndex": "evidence/EVIDENCE_INDEX.json",
+    "note": "Prior-release evidence retained for provenance; not current UI/video/test status."
   }
 }

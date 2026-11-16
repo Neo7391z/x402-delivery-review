@@ -1,10 +1,13 @@
+import { createUiApi } from "./ui-api.js";
 import { sandboxAction, closeSandbox } from "./sandbox-api.js";
 import { createServer } from "node:http";
 import { readFile } from "node:fs/promises";
 import { sha256, verifyFinalDecision } from "./verify.js";
 import { packet, sampleHeader, samples, policy } from "./core.js";
+const uiApi = createUiApi();
 export const server = createServer(async (req, res) => {
   try {
+    if (await uiApi(req, res)) return;
     if (req.method === "POST" && req.url?.startsWith("/api/sandbox/")) {
       res.setHeader("Content-Type", "application/json");
       try {
@@ -170,6 +173,11 @@ export const server = createServer(async (req, res) => {
     ) {
       res.setHeader("Content-Type", "image/svg+xml");
       res.end(await readFile(new URL("../public" + req.url, import.meta.url)));
+      return;
+    }
+    if (req.url === "/ui.js") {
+      res.setHeader("Content-Type", "text/javascript; charset=utf-8");
+      res.end(await readFile(new URL("../public/ui.js", import.meta.url)));
       return;
     }
     if (req.url !== "/") {

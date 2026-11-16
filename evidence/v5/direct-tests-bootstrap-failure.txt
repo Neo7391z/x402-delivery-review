@@ -1,3 +1,4 @@
+SUPERSEDED HISTORICAL / prior-release. See evidence/EVIDENCE_INDEX.json for current status.
 WARNING: File `gltest.config.yaml` not found in the current directory, using default config, create a `gltest.config.yaml` file to manage multiple networks
 INFO: Clearing artifacts directory: artifacts
 INFO: Using the following configuration:

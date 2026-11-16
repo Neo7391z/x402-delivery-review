@@ -17,5 +17,11 @@
     "independentAgree": 2,
     "leaderAddress": "0x173a86dbe046c0c6aa3a48bb8dd9d20c001a2ac1"
   },
-  "checkedAt": "2026-11-15T10:12:11.898Z"
+  "checkedAt": "2026-11-15T10:12:11.898Z",
+  "_evidenceMetadata": {
+    "status": "superseded-historical",
+    "artifactRevision": "prior-release",
+    "currentIndex": "evidence/EVIDENCE_INDEX.json",
+    "note": "Prior-release evidence retained for provenance; not current UI/video/test status."
+  }
 }

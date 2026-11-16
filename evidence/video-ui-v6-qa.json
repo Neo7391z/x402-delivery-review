@@ -1,0 +1,19 @@
+{
+  "programs": [],
+  "stream_groups": [],
+  "streams": [
+    {
+      "width": 1280,
+      "height": 1050,
+      "r_frame_rate": "24/1",
+      "nb_frames": "960"
+    }
+  ],
+  "format": {
+    "duration": "40.000000"
+  },
+  "decodePassed": true,
+  "source": "Actual browser fresh lifecycle ui-da3e83f0-8aba-4e8f-858e-3ee4c50f13a9",
+  "editing": "Waiting periods cut; some clips retimed; no synthetic UI/result",
+  "AIProcessing": "AI-generated title/end background, motion, compositing and captions"
+}

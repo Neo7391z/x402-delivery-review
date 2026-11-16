@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "jobId": "da3e83f0-8aba-4e8f-858e-3ee4c50f13a9",
+  "serverRestartRestoredCompletedJob": true,
+  "recheckVerified": true,
+  "effectReplayed": false,
+  "errors": [],
+  "originalReviewTransaction": "0x3d60bae258389bb8015cb3fd37ab796fee2e51a39797956e7bdbb72613302728",
+  "recheckTransaction": "0x3d60bae258389bb8015cb3fd37ab796fee2e51a39797956e7bdbb72613302728"
+}

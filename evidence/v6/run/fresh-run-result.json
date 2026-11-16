@@ -1,0 +1,46 @@
+{
+  "runId": "ui-da3e83f0-8aba-4e8f-858e-3ee4c50f13a9",
+  "scenario": "bad",
+  "network": 61999,
+  "deploymentHash": "0x8750a170de6068a9b1933369451eef4200114341b291169386ac098d9b212a84",
+  "contractAddress": "0xaE71448aa013374735eF738Ec650B6b3229d405A",
+  "operator": "0x7F30d532CA6081aD3DA6cF9D9EB399C1DE8C2df7",
+  "evidenceId": "a901bce6983cbabffd4a19957a7d4206a3c1c9ab502eebdedb716bbfc0919a0a",
+  "reviewTransactionHash": "0x3d60bae258389bb8015cb3fd37ab796fee2e51a39797956e7bdbb72613302728",
+  "verification": {
+    "verified": true,
+    "effect": "PAUSE",
+    "decision": "REWORK",
+    "reason": "The answer promises guaranteed correctness ('always correct'), directly violating the terms. It omits validator independence, challenge escalation, and uncertainty, instead claiming the first validator decides everything and challenges are unnecessary. It therefore fails to explain how disagreement is handled.",
+    "evidenceId": "a901bce6983cbabffd4a19957a7d4206a3c1c9ab502eebdedb716bbfc0919a0a",
+    "transactionHash": "0x3d60bae258389bb8015cb3fd37ab796fee2e51a39797956e7bdbb72613302728",
+    "contractAddress": "0xaE71448aa013374735eF738Ec650B6b3229d405A",
+    "sourceSha256": "c7acf29cd223bf3235bebf8e5434b87e6e44940d8d4a3c3c20f073a8970f747d",
+    "chainId": 61999,
+    "rpc": "https://studio.genlayer.com/api",
+    "trust": "trusted-studionet-rpc",
+    "consensus": {
+      "agree": 3,
+      "idle": 2,
+      "total": 5,
+      "independentAgree": 2,
+      "leaderAddress": "0x173a86dbe046c0c6aa3a48bb8dd9d20c001a2ac1"
+    },
+    "checkedAt": "2026-11-16T08:39:58.711Z"
+  },
+  "controllerState": "PAUSE",
+  "requestCountBeforeAttempt": 2,
+  "requestCountAfterAttempt": 2,
+  "nextRequestBlockedBeforeFetch": true,
+  "nextDeliveryCompleted": false,
+  "events": [
+    "GET → 402",
+    "Official x402 SDK → signed sandbox authorization",
+    "200 → provider signature verified → HOLD for Court",
+    "Court REWORK → PAUSE",
+    "BLOCKED before fetch: PAUSE"
+  ],
+  "value": "0",
+  "gasPrice": "0",
+  "scope": "Fresh signed HTTP delivery; public hosted Studionet; local controller; no real payment, jury case or wallet-wide revocation"
+}

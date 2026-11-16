@@ -18,13 +18,19 @@
   "nextRequestBlockedBeforeFetch": true,
   "nextDeliveryCompleted": false,
   "events": [
-    "GET → 402",
-    "Official x402 SDK → signed sandbox authorization",
-    "200 → provider signature verified → HOLD for Court",
-    "Unverified decision → HOLD",
+    "GET \u2192 402",
+    "Official x402 SDK \u2192 signed sandbox authorization",
+    "200 \u2192 provider signature verified \u2192 HOLD for Court",
+    "Unverified decision \u2192 HOLD",
     "BLOCKED before fetch: HOLD"
   ],
   "value": "0",
   "gasPrice": "0",
-  "scope": "Fresh signed HTTP delivery; public hosted Studionet; local controller; no real payment, jury case or wallet-wide revocation"
+  "scope": "Fresh signed HTTP delivery; public hosted Studionet; local controller; no real payment, jury case or wallet-wide revocation",
+  "_evidenceMetadata": {
+    "status": "superseded-historical",
+    "artifactRevision": "prior-release",
+    "currentIndex": "evidence/EVIDENCE_INDEX.json",
+    "note": "Prior-release evidence retained for provenance; not current UI/video/test status."
+  }
 }

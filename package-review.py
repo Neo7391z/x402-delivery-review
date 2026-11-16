@@ -3,7 +3,7 @@ import json,hashlib,zipfile
 root=Path(__file__).resolve().parent
 out=root.parent/'delivery-review-review-package.zip'
 exclude={'.git','.local','.venv','node_modules','dist','.pytest_cache','__pycache__','artifacts','captures'}
-files=[p for p in root.rglob('*') if p.is_file() and not any(x in exclude for x in p.relative_to(root).parts) and p.name not in {'REVIEW_RU.md','SIGNING_HANDOFF.md','PUBLIC_UPDATE.md','SUBMISSION_DRAFT.md','authorization-status.json','court-brand-source.html','SHA256SUMS','edit-intro.mp4','edit-outro.mp4','edit-sandbox.mp4','edit-recorded.mp4','edit-list.txt'} and not p.name.endswith('.zip')]
+files=[p for p in root.rglob('*') if p.is_file() and not any(x in exclude for x in p.relative_to(root).parts) and p.name not in {'PUBLIC_UPDATE.md','SIGNING_HANDOFF.md','REVIEW_RU.md','SUBMISSION_DRAFT.md','authorization-status.json','court-brand-source.html','SHA256SUMS','edit-intro.mp4','edit-outro.mp4','edit-sandbox.mp4','edit-recorded.mp4','edit-list.txt'} and not p.name.endswith('.zip') and not p.name.startswith('v6-edit-')]
 secrets=[]
 for p in (root/'.local').rglob('*.json'):
  try:

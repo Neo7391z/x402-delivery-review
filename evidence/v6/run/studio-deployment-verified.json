@@ -1,0 +1,9 @@
+{
+  "status": "FINALIZED",
+  "execution": "SUCCESS",
+  "contractAddress": "0xaE71448aa013374735eF738Ec650B6b3229d405A",
+  "owner": "0x7F30d532CA6081aD3DA6cF9D9EB399C1DE8C2df7",
+  "sourceSha256": "c7acf29cd223bf3235bebf8e5434b87e6e44940d8d4a3c3c20f073a8970f747d",
+  "chainId": 61999,
+  "deploymentHash": "0x8750a170de6068a9b1933369451eef4200114341b291169386ac098d9b212a84"
+}

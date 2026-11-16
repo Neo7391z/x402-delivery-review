@@ -5,6 +5,12 @@
   "errors": [],
   "imagesLoaded": true,
   "mobileOverflow": false,
-  "before": "GET → 402\nOfficial x402 SDK → signed sandbox authorization\n200 → provider signature verified → HOLD for Court\nProvider requests this session: 2 / deliveries: 1",
-  "after": "GET → 402\nOfficial x402 SDK → signed sandbox authorization\n200 → provider signature verified → HOLD for Court\nBLOCKED before fetch: HOLD\nProvider requests this session: 2 / deliveries: 1"
+  "before": "GET \u2192 402\nOfficial x402 SDK \u2192 signed sandbox authorization\n200 \u2192 provider signature verified \u2192 HOLD for Court\nProvider requests this session: 2 / deliveries: 1",
+  "after": "GET \u2192 402\nOfficial x402 SDK \u2192 signed sandbox authorization\n200 \u2192 provider signature verified \u2192 HOLD for Court\nBLOCKED before fetch: HOLD\nProvider requests this session: 2 / deliveries: 1",
+  "_evidenceMetadata": {
+    "status": "superseded-historical",
+    "artifactRevision": "prior-release",
+    "currentIndex": "evidence/EVIDENCE_INDEX.json",
+    "note": "Prior-release evidence retained for provenance; not current UI/video/test status."
+  }
 }

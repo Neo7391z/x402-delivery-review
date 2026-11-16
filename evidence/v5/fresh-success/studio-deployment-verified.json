@@ -5,5 +5,11 @@
   "owner": "0x219a2eda358f939537932d12daec5A84d65942d8",
   "sourceSha256": "c7acf29cd223bf3235bebf8e5434b87e6e44940d8d4a3c3c20f073a8970f747d",
   "chainId": 61999,
-  "deploymentHash": "0x0720e026d25221e16a0f77000f42a6f233fd53409b411cf1a4a86f60614781c9"
+  "deploymentHash": "0x0720e026d25221e16a0f77000f42a6f233fd53409b411cf1a4a86f60614781c9",
+  "_evidenceMetadata": {
+    "status": "superseded-historical",
+    "artifactRevision": "prior-release",
+    "currentIndex": "evidence/EVIDENCE_INDEX.json",
+    "note": "Prior-release evidence retained for provenance; not current UI/video/test status."
+  }
 }
